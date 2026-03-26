@@ -1,0 +1,168 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-playfair);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+
+  /* Barbaria brand colors */
+  --color-pink: #E299A1;
+  --color-pink-light: #F0C4CA;
+  --color-cream: #FDFCF8;
+  --color-gold: #D4AF37;
+  --color-obsidian: #1A1A1A;
+  --color-sand: #EAE7DC;
+}
+
+:root {
+  --background: #FDFCF8;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --primary: #1A1A1A;
+  --primary-foreground: #FDFCF8;
+  --secondary: #EAE7DC;
+  --secondary-foreground: #1A1A1A;
+  --muted: #EAE7DC;
+  --muted-foreground: #6B6B6B;
+  --accent: #E299A1;
+  --accent-foreground: #FDFCF8;
+  --border: #E5E0D5;
+  --input: #E5E0D5;
+  --ring: #E299A1;
+  --destructive: oklch(0.577 0.245 27.325);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    @apply border-border outline-ring/50;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-playfair), serif;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: var(--font-playfair), serif;
+  }
+
+  /* Glass panel — light background context */
+  .glass {
+    background: rgba(253, 252, 248, 0.55);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+
+  /* Glass panel — dark background context */
+  .glass-dark {
+    background: rgba(26, 26, 26, 0.45);
+    backdrop-filter: blur(20px) saturate(1.6);
+    -webkit-backdrop-filter: blur(20px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+
+  /* Glass button — pink */
+  .btn-glass-pink {
+    background: rgba(226, 153, 161, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(240, 196, 202, 0.5);
+    box-shadow: 0 2px 16px rgba(226, 153, 161, 0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+    color: #fff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-glass-pink:hover {
+    background: rgba(226, 153, 161, 0.92);
+    box-shadow: 0 4px 24px rgba(226, 153, 161, 0.5), inset 0 1px 0 rgba(255,255,255,0.3);
+    transform: translateY(-1px);
+  }
+
+  /* Glass button — outline on dark */
+  .btn-glass-outline {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    color: #FDFCF8;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-glass-outline:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+  }
+
+  /* Glass button — outline on light */
+  .btn-glass-outline-dark {
+    background: rgba(26, 26, 26, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(26, 26, 26, 0.2);
+    color: #1A1A1A;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-glass-outline-dark:hover {
+    background: rgba(26, 26, 26, 0.88);
+    color: #FDFCF8;
+    transform: translateY(-1px);
+  }
+
+  /* Smooth card hover lift */
+  .card-hover {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Fade-in-up animation */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+  .animation-delay-200 { animation-delay: 0.2s; }
+  .animation-delay-400 { animation-delay: 0.4s; }
+  .animation-delay-600 { animation-delay: 0.6s; }
+}

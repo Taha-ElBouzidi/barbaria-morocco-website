@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À Propos",
+    "contact": "Contact",
+    "order": "Commander"
+  },
+  "hero": {
+    "tagline": "Cosmétiques Naturels du Maroc",
+    "headline": "L'Essence du Maroc",
+    "subheadline": "Des soins de beauté naturels, artisanaux, inspirés du patrimoine marocain. Argan, Fleur d'oranger, Nila.",
+    "cta": "Découvrir nos produits"
+  },
+  "featured": {
+    "title": "Nos Produits",
+    "subtitle": "Une collection de soins premium, formulés avec les meilleurs ingrédients du Maroc.",
+    "view": "Voir le produit"
+  },
+  "ingredients": {
+    "title": "Nos Ingrédients",
+    "subtitle": "Directement du cœur du Maroc.",
+    "argan": {
+      "name": "Argan Pur",
+      "desc": "Pressé à froid dans les coopératives berbères de l'Atlas. Riche en vitamine E et acides gras essentiels."
+    },
+    "orange": {
+      "name": "Fleur d'Oranger",
+      "desc": "Distillée à la vapeur d'eau. Apaisante, régénérante, avec un parfum délicat et floral."
+    },
+    "nila": {
+      "name": "Nila",
+      "desc": "Pigment bleu naturel utilisé depuis des siècles dans le soin de la peau au Maghreb. Purifiant et détoxifiant."
+    }
+  },
+  "cta_banner": {
+    "title": "Prêt à commander ?",
+    "subtitle": "Contactez-nous directement sur WhatsApp ou Instagram.",
+    "whatsapp": "Commander sur WhatsApp",
+    "instagram": "Nous suivre sur Instagram"
+  },
+  "products": {
+    "title": "Notre Collection",
+    "subtitle": "Trois soins essentiels, une seule philosophie : la beauté naturelle marocaine.",
+    "argan": {
+      "name": "Huile d'Argan",
+      "tagline": "Or liquide du Maroc",
+      "description": "Notre Huile d'Argan pure est extraite par pression à froid de noix d'arganier soigneusement sélectionnées. Idéale pour nourrir la peau, sublimer les cheveux et renforcer les ongles. Non grasse, vite absorbée.",
+      "ingredients": ["Argan pur (Argania Spinosa)"],
+      "volume": "30ml",
+      "price": "45€",
+      "whatsapp_msg": "Bonjour, je souhaite commander l'Huile d'Argan Barbaria Morocco.",
+      "order": "Commander sur WhatsApp",
+      "instagram": "Voir sur Instagram"
+    },
+    "savon": {
+      "name": "Savon Noir",
+      "tagline": "Rituel hammam authentique",
+      "description": "Le Savon Noir traditionnel marocain, enrichi à la Fleur d'oranger et à la Nila. Exfoliant naturel, il purifie en profondeur, illumine le teint et prépare la peau au soin. Rituel de hammam à la maison.",
+      "ingredients": ["Olive saponifiée", "Fleur d'oranger", "Nila"],
+      "volume": "200ml",
+      "price": "28€",
+      "whatsapp_msg": "Bonjour, je souhaite commander le Savon Noir Barbaria Morocco.",
+      "order": "Commander sur WhatsApp",
+      "instagram": "Voir sur Instagram"
+    },
+    "scrub": {
+      "name": "Sugar Body Scrub",
+      "tagline": "Gommage corps douceur",
+      "description": "Notre gommage corps au sucre allie l'action exfoliante douce du sucre aux bienfaits nourrissants de l'Argan, à la douceur florale de la Fleur d'oranger et à la pureté de la Nila. Peau lisse, douce et lumineuse.",
+      "ingredients": ["Sucre", "Huile d'Argan", "Fleur d'oranger", "Nila"],
+      "volume": "300ml",
+      "price": "35€",
+      "whatsapp_msg": "Bonjour, je souhaite commander le Sugar Body Scrub Barbaria Morocco.",
+      "order": "Commander sur WhatsApp",
+      "instagram": "Voir sur Instagram"
+    }
+  },
+  "about": {
+    "title": "Notre Histoire",
+    "subtitle": "Barbaria Morocco",
+    "story_1": "Née au cœur du Maroc, Barbaria Morocco est une marque de cosmétiques naturels fondée sur une conviction profonde : les meilleurs soins de beauté sont ceux que la nature a déjà créés.",
+    "story_2": "Nous travaillons directement avec des coopératives berbères et des artisans locaux pour sélectionner les ingrédients les plus purs : Huile d'Argan pressée à froid, Savon Noir traditionnel, Fleur d'oranger distillée à la vapeur.",
+    "story_3": "Chaque produit Barbaria Morocco est formulé sans produits chimiques agressifs, sans perturbateurs endocriniens, et conditionné de manière responsable. La beauté naturelle, c'est notre héritage.",
+    "values_title": "Nos Valeurs",
+    "values": {
+      "natural": { "title": "Naturel", "desc": "100% d'ingrédients d'origine naturelle, sans parabènes ni sulfates." },
+      "artisanal": { "title": "Artisanal", "desc": "Fabriqué à la main par des artisans marocains selon des recettes traditionnelles." },
+      "moroccan": { "title": "Marocain", "desc": "Ancré dans le patrimoine de beauté du Maroc, du Sahara à l'Atlas." }
+    },
+    "gallery_title": "En Images"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question ? Une commande ? Nous répondons dans les 24h.",
+    "form": {
+      "name": "Votre nom",
+      "email": "Votre email",
+      "message": "Votre message",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé ! Nous vous répondrons sous 24h.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "or": "Ou contactez-nous directement",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email_label": "Email"
+  },
+  "footer": {
+    "tagline": "Cosmétiques naturels du Maroc",
+    "links": "Liens",
+    "follow": "Nous suivre",
+    "copyright": "© 2026 Barbaria Morocco. Tous droits réservés."
+  }
+}

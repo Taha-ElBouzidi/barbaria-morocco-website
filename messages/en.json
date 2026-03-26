@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "order": "Order"
+  },
+  "hero": {
+    "tagline": "Natural Cosmetics from Morocco",
+    "headline": "The Essence of Morocco",
+    "subheadline": "Natural, handcrafted beauty care inspired by Morocco's rich heritage. Argan, Orange Blossom, Nila.",
+    "cta": "Discover our products"
+  },
+  "featured": {
+    "title": "Our Products",
+    "subtitle": "A premium skincare collection, formulated with the finest ingredients from Morocco.",
+    "view": "View product"
+  },
+  "ingredients": {
+    "title": "Our Ingredients",
+    "subtitle": "Straight from the heart of Morocco.",
+    "argan": {
+      "name": "Pure Argan",
+      "desc": "Cold-pressed at Berber cooperatives in the Atlas mountains. Rich in vitamin E and essential fatty acids."
+    },
+    "orange": {
+      "name": "Orange Blossom",
+      "desc": "Steam-distilled. Soothing, regenerating, with a delicate floral fragrance."
+    },
+    "nila": {
+      "name": "Nila",
+      "desc": "A natural blue pigment used for centuries in North African skincare. Purifying and detoxifying."
+    }
+  },
+  "cta_banner": {
+    "title": "Ready to order?",
+    "subtitle": "Contact us directly on WhatsApp or Instagram.",
+    "whatsapp": "Order on WhatsApp",
+    "instagram": "Follow us on Instagram"
+  },
+  "products": {
+    "title": "Our Collection",
+    "subtitle": "Three essential skincare products, one philosophy: natural Moroccan beauty.",
+    "argan": {
+      "name": "Argan Oil",
+      "tagline": "Liquid gold from Morocco",
+      "description": "Our pure Argan Oil is cold-pressed from carefully selected argan kernels. Perfect for nourishing skin, enhancing hair, and strengthening nails. Non-greasy and fast-absorbing.",
+      "ingredients": ["Pure Argan (Argania Spinosa)"],
+      "volume": "30ml",
+      "price": "€45",
+      "whatsapp_msg": "Hello, I would like to order the Barbaria Morocco Argan Oil.",
+      "order": "Order on WhatsApp",
+      "instagram": "View on Instagram"
+    },
+    "savon": {
+      "name": "Black Soap",
+      "tagline": "Authentic hammam ritual",
+      "description": "Traditional Moroccan black soap enriched with Orange Blossom and Nila. A natural exfoliant that deeply purifies, brightens your complexion, and prepares skin for treatment. Bring the hammam ritual home.",
+      "ingredients": ["Saponified Olive Oil", "Orange Blossom", "Nila"],
+      "volume": "200ml",
+      "price": "€28",
+      "whatsapp_msg": "Hello, I would like to order the Barbaria Morocco Black Soap.",
+      "order": "Order on WhatsApp",
+      "instagram": "View on Instagram"
+    },
+    "scrub": {
+      "name": "Sugar Body Scrub",
+      "tagline": "Gentle body exfoliator",
+      "description": "Our sugar body scrub combines the gentle exfoliating power of sugar with the nourishing benefits of Argan oil, the floral softness of Orange Blossom, and the purity of Nila. Smooth, soft, glowing skin.",
+      "ingredients": ["Sugar", "Argan Oil", "Orange Blossom", "Nila"],
+      "volume": "300ml",
+      "price": "€35",
+      "whatsapp_msg": "Hello, I would like to order the Barbaria Morocco Sugar Body Scrub.",
+      "order": "Order on WhatsApp",
+      "instagram": "View on Instagram"
+    }
+  },
+  "about": {
+    "title": "Our Story",
+    "subtitle": "Barbaria Morocco",
+    "story_1": "Born in the heart of Morocco, Barbaria Morocco is a natural cosmetics brand built on a deep conviction: the best beauty care is what nature has already created.",
+    "story_2": "We work directly with Berber cooperatives and local artisans to select the purest ingredients: cold-pressed Argan Oil, traditional Black Soap, steam-distilled Orange Blossom.",
+    "story_3": "Every Barbaria Morocco product is formulated without harsh chemicals or endocrine disruptors, and packaged responsibly. Natural beauty is our heritage.",
+    "values_title": "Our Values",
+    "values": {
+      "natural": { "title": "Natural", "desc": "100% natural origin ingredients, free from parabens and sulfates." },
+      "artisanal": { "title": "Artisanal", "desc": "Handmade by Moroccan craftspeople following traditional recipes." },
+      "moroccan": { "title": "Moroccan", "desc": "Rooted in Morocco's beauty heritage, from the Sahara to the Atlas mountains." }
+    },
+    "gallery_title": "In Photos"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "A question? An order? We reply within 24 hours.",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Your message",
+      "submit": "Send",
+      "sending": "Sending...",
+      "success": "Message sent! We'll get back to you within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    },
+    "or": "Or reach us directly",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email_label": "Email"
+  },
+  "footer": {
+    "tagline": "Natural cosmetics from Morocco",
+    "links": "Links",
+    "follow": "Follow us",
+    "copyright": "© 2026 Barbaria Morocco. All rights reserved."
+  }
+}
