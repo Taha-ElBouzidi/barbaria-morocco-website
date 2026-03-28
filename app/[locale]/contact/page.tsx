@@ -59,6 +59,8 @@ export default function ContactPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Honeypot field - hidden from users, catches bots */}
+              <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <label htmlFor="contact-name" className="sr-only">{t("form.name")}</label>
               <Input
                 id="contact-name"

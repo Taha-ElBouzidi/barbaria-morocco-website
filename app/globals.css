@@ -77,6 +77,11 @@
     @apply border-border outline-ring/50;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+  /* Visible focus ring for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid #C9963A;
+    outline-offset: 2px;
+  }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-inter), sans-serif;

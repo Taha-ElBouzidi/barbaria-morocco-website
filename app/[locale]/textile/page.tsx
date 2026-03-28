@@ -71,13 +71,14 @@ function ProductCard({
             src={photos[0]}
             alt={t("name")}
             fill
+            loading="lazy"
             className="object-cover transition-transform duration-700 hover:scale-105"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
         {photos[1] && (
           <div className="absolute -bottom-8 right-4 w-2/5 aspect-square overflow-hidden rounded-sm border-4 border-[#F7F2EA] shadow-xl">
-            <Image src={photos[1]} alt={t("name")} fill className="object-cover" sizes="20vw" />
+            <Image src={photos[1]} alt={t("name")} fill loading="lazy" className="object-cover" sizes="20vw" />
           </div>
         )}
       </div>
