@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
 
 const WHATSAPP_NUMBER = "TODO_WHATSAPP"; // TODO: add WhatsApp number
 const INSTAGRAM_HANDLE = "barbaria_00";
@@ -49,17 +50,26 @@ export default function Navbar({ locale }: { locale: string }) {
     >
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-none flex-shrink-0">
-          <span
-            className={`font-playfair text-lg font-bold tracking-widest uppercase transition-colors duration-300 ${
-              scrolled || !isHeroPage ? "text-[#2C1A0E]" : "text-[#F7F2EA]"
-            }`}
-          >
-            Barbaria
-          </span>
-          <span className="text-[10px] tracking-[0.3em] text-[#C9963A] uppercase font-medium">
-            Morocco
-          </span>
+        <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+          <Image
+            src="/brand_photos/barbaria-logo.jpg"
+            alt="Barbaria Morocco"
+            width={36}
+            height={36}
+            className="rounded-full"
+          />
+          <div className="flex flex-col leading-none">
+            <span
+              className={`font-playfair text-lg font-bold tracking-widest uppercase transition-colors duration-300 ${
+                scrolled || !isHeroPage ? "text-[#2C1A0E]" : "text-[#F7F2EA]"
+              }`}
+            >
+              Barbaria
+            </span>
+            <span className="text-[10px] tracking-[0.3em] text-[#C9963A] uppercase font-medium">
+              Morocco
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}

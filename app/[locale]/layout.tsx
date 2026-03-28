@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { ViewTransitions } from "next-view-transitions";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../globals.css";
@@ -74,43 +75,45 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html
-      lang={locale}
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-[#F7F2EA] text-[#2C1A0E]">
-        <NextIntlClientProvider locale={locale}>
-          <Navbar locale={locale} />
-          <main className="flex-1">{children}</main>
-          <WhatsAppFloat />
-          <Footer />
-        </NextIntlClientProvider>
-        <Analytics />
-        <SpeedInsights />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Barbaria Morocco",
-              url: baseUrl,
-              logo: `${baseUrl}/brand_photos/products-all-three.jpg`,
-              description:
-                "Cosmetiques naturels, textile artisanal et produits alimentaires du terroir marocain.",
-              contactPoint: {
-                "@type": "ContactPoint",
-                email: "ta.elbouzidi@gmail.com",
-                contactType: "customer service",
-                availableLanguage: ["French", "English"],
-              },
-              sameAs: [
-                "https://instagram.com/barbaria_00",
-              ],
-            }),
-          }}
-        />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html
+        lang={locale}
+        className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      >
+        <body className="min-h-full flex flex-col bg-[#F7F2EA] text-[#2C1A0E]">
+          <NextIntlClientProvider locale={locale}>
+            <Navbar locale={locale} />
+            <main className="flex-1">{children}</main>
+            <WhatsAppFloat />
+            <Footer />
+          </NextIntlClientProvider>
+          <Analytics />
+          <SpeedInsights />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Barbaria Morocco",
+                url: baseUrl,
+                logo: `${baseUrl}/brand_photos/barbaria-logo.jpg`,
+                description:
+                  "Cosmetiques naturels, textile artisanal et produits alimentaires du terroir marocain.",
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  email: "ta.elbouzidi@gmail.com",
+                  contactType: "customer service",
+                  availableLanguage: ["French", "English"],
+                },
+                sameAs: [
+                  "https://instagram.com/barbaria_00",
+                ],
+              }),
+            }}
+          />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
