@@ -3,7 +3,6 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { ViewTransitions } from "next-view-transitions";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../globals.css";
@@ -75,8 +74,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <ViewTransitions>
-      <html
+    <html
         lang={locale}
         className={`${inter.variable} ${playfair.variable} h-full antialiased`}
       >
@@ -114,6 +112,5 @@ export default async function LocaleLayout({
           />
         </body>
       </html>
-    </ViewTransitions>
-  );
+    );
 }
