@@ -1,92 +1,163 @@
 {
   "nav": {
     "home": "Accueil",
-    "products": "Produits",
+    "cosmetics": "Cosmétiques",
+    "textile": "Textile",
+    "food": "Alimentaire",
     "about": "À Propos",
     "contact": "Contact",
-    "order": "Commander"
+    "collections": "Collections"
   },
-  "hero": {
-    "tagline": "Cosmétiques Naturels du Maroc",
-    "headline": "L'Essence du Maroc",
-    "subheadline": "Des soins de beauté naturels, artisanaux, inspirés du patrimoine marocain. Argan, Fleur d'oranger, Nila.",
-    "cta": "Découvrir nos produits"
-  },
-  "featured": {
-    "title": "Nos Produits",
-    "subtitle": "Une collection de soins premium, formulés avec les meilleurs ingrédients du Maroc.",
-    "view": "Voir le produit"
-  },
-  "ingredients": {
-    "title": "Nos Ingrédients",
-    "subtitle": "Directement du cœur du Maroc.",
-    "argan": {
-      "name": "Argan Pur",
-      "desc": "Pressé à froid dans les coopératives berbères de l'Atlas. Riche en vitamine E et acides gras essentiels."
-    },
-    "orange": {
-      "name": "Fleur d'Oranger",
-      "desc": "Distillée à la vapeur d'eau. Apaisante, régénérante, avec un parfum délicat et floral."
-    },
-    "nila": {
-      "name": "Nila",
-      "desc": "Pigment bleu naturel utilisé depuis des siècles dans le soin de la peau au Maghreb. Purifiant et détoxifiant."
+  "home": {
+    "tagline": "L'authenticité marocaine. La rareté d'une création.",
+    "headline": "Barbaria Morocco",
+    "subheadline": "Trois univers. Un seul héritage — le Maroc artisanal, naturel et vivant.",
+    "cta": "Découvrir nos collections",
+    "categories": {
+      "cosmetics": {
+        "label": "Cosmétiques",
+        "tagline": "Soins naturels",
+        "desc": "Huile d'Argan, Savon Noir, Sugar Body Scrub — formulés par des artisanes berbères.",
+        "cta": "Découvrir"
+      },
+      "textile": {
+        "label": "Textile",
+        "tagline": "100% fait main",
+        "desc": "Sacs et pochettes uniques tissés à partir de tapis marocains traditionnels.",
+        "cta": "Découvrir"
+      },
+      "food": {
+        "label": "Alimentaire",
+        "tagline": "Bientôt disponible",
+        "desc": "Épices, coffrets cadeaux et saveurs du Maroc — une nouvelle collection à venir.",
+        "cta": "Être notifié"
+      }
     }
   },
-  "cta_banner": {
-    "title": "Prêt à commander ?",
-    "subtitle": "Contactez-nous directement sur WhatsApp ou Instagram.",
-    "whatsapp": "Commander sur WhatsApp",
-    "instagram": "Nous suivre sur Instagram"
-  },
-  "products": {
-    "title": "Notre Collection",
-    "subtitle": "Trois soins essentiels, une seule philosophie : la beauté naturelle marocaine.",
-    "argan": {
-      "name": "Huile d'Argan",
-      "tagline": "Or liquide du Maroc",
-      "description": "Notre Huile d'Argan pure est extraite par pression à froid de noix d'arganier soigneusement sélectionnées. Idéale pour nourrir la peau, sublimer les cheveux et renforcer les ongles. Non grasse, vite absorbée.",
-      "ingredients": ["Argan pur (Argania Spinosa)"],
-      "volume": "30ml",
-      "price": "45€",
-      "whatsapp_msg": "Bonjour, je souhaite commander l'Huile d'Argan Barbaria Morocco.",
-      "order": "Commander sur WhatsApp",
-      "instagram": "Voir sur Instagram"
+  "cosmetics": {
+    "title": "Cosmétiques Naturels",
+    "subtitle": "Des soins premium formulés avec les meilleurs ingrédients du Maroc, par des mains qui savent.",
+    "tagline_page": "Clean beauty · Made in Morocco",
+    "featured_title": "Nos Soins",
+    "view": "Voir le produit",
+    "products": {
+      "argan": {
+        "name": "Huile d'Argan Pure",
+        "tagline": "L'or liquide du Maroc",
+        "description": "Extraite par pression à froid de noix d'arganier soigneusement sélectionnées dans les coopératives berbères de l'Atlas. Idéale pour nourrir la peau, sublimer les cheveux et renforcer les ongles. Non grasse, vite absorbée.",
+        "ingredients": ["Argan pur (Argania Spinosa)"],
+        "volume": "30ml",
+        "price": "45€",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile d'Argan Pure Barbaria Morocco.",
+        "order": "Commander sur WhatsApp",
+        "instagram": "Voir sur Instagram"
+      },
+      "savon": {
+        "name": "Savon Noir Beldi",
+        "tagline": "Le rituel hammam authentique",
+        "description": "Le Savon Noir traditionnel marocain, enrichi à la Fleur d'oranger et à la Nila. Exfoliant naturel, il purifie en profondeur, illumine le teint et prépare la peau au soin. 100% naturel, sans additifs.",
+        "ingredients": ["Olive saponifiée", "Fleur d'oranger", "Nila"],
+        "volume": "200ml",
+        "price": "28€",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Savon Noir Beldi Barbaria Morocco.",
+        "order": "Commander sur WhatsApp",
+        "instagram": "Voir sur Instagram"
+      },
+      "scrub": {
+        "name": "Sugar Body Scrub",
+        "tagline": "Gommage corps douceur",
+        "description": "Notre gommage corps au sucre allie l'action exfoliante douce du sucre aux bienfaits nourrissants de l'Argan, à la douceur florale de la Fleur d'oranger et à la pureté de la Nila. Peau lisse, douce et lumineuse.",
+        "ingredients": ["Sucre", "Huile d'Argan", "Fleur d'oranger", "Nila"],
+        "volume": "300ml",
+        "price": "35€",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Sugar Body Scrub Barbaria Morocco.",
+        "order": "Commander sur WhatsApp",
+        "instagram": "Voir sur Instagram"
+      },
+      "saad": {
+        "name": "Huile de Saad",
+        "tagline": "Le laser naturel",
+        "description": "Extraite du Cyperus Esculentus — Souchet odorant marocain — pressé à froid. Stimule la microcirculation du cuir chevelu, réactive les follicules pileux endormis et agit sur les zones de calvitie. Résultats visibles en 4 à 8 semaines.",
+        "ingredients": ["Cyperus Esculentus (Saad) pur 100%"],
+        "volume": "30ml",
+        "price": "Sur demande",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile de Saad Barbaria Morocco.",
+        "order": "Commander sur WhatsApp",
+        "instagram": "Voir sur Instagram"
+      }
     },
-    "savon": {
-      "name": "Savon Noir",
-      "tagline": "Rituel hammam authentique",
-      "description": "Le Savon Noir traditionnel marocain, enrichi à la Fleur d'oranger et à la Nila. Exfoliant naturel, il purifie en profondeur, illumine le teint et prépare la peau au soin. Rituel de hammam à la maison.",
-      "ingredients": ["Olive saponifiée", "Fleur d'oranger", "Nila"],
-      "volume": "200ml",
-      "price": "28€",
-      "whatsapp_msg": "Bonjour, je souhaite commander le Savon Noir Barbaria Morocco.",
-      "order": "Commander sur WhatsApp",
-      "instagram": "Voir sur Instagram"
-    },
-    "scrub": {
-      "name": "Sugar Body Scrub",
-      "tagline": "Gommage corps douceur",
-      "description": "Notre gommage corps au sucre allie l'action exfoliante douce du sucre aux bienfaits nourrissants de l'Argan, à la douceur florale de la Fleur d'oranger et à la pureté de la Nila. Peau lisse, douce et lumineuse.",
-      "ingredients": ["Sucre", "Huile d'Argan", "Fleur d'oranger", "Nila"],
-      "volume": "300ml",
-      "price": "35€",
-      "whatsapp_msg": "Bonjour, je souhaite commander le Sugar Body Scrub Barbaria Morocco.",
-      "order": "Commander sur WhatsApp",
-      "instagram": "Voir sur Instagram"
+    "ingredients": {
+      "title": "Nos Ingrédients",
+      "subtitle": "Directement du cœur du Maroc.",
+      "argan": { "name": "Argan Pur", "desc": "Pressé à froid dans les coopératives berbères de l'Atlas. Riche en vitamine E et acides gras essentiels." },
+      "orange": { "name": "Fleur d'Oranger", "desc": "Distillée à la vapeur d'eau. Apaisante, régénérante, au parfum délicat et floral." },
+      "nila": { "name": "Nila", "desc": "Pigment bleu naturel utilisé depuis des siècles dans le soin de la peau au Maghreb. Purifiant et détoxifiant." }
     }
+  },
+  "textile": {
+    "title": "Textile Artisanal",
+    "subtitle": "Chaque tapis marocain porte une histoire. Nous lui donnons une nouvelle vie.",
+    "tagline_page": "100% fait main · Made in Morocco",
+    "story": "Des motifs qui traversent les générations, des mains d'artisans qui, depuis des siècles, tissent des rêves, des traditions et des émotions. Chez Barbaria Morocco, nous transformons ces tissus précieux en pièces uniques.",
+    "impact": "Porter un sac Barbaria, c'est adopter un morceau d'histoire et faire partie d'un impact social positif.",
+    "products": {
+      "sac_femme": {
+        "name": "Sac à Main Femme",
+        "tagline": "L'élégance d'une histoire",
+        "description": "Sac à main entièrement fait main à partir de tapis marocains authentiques. Anses en cuir véritable. Chaque pièce est unique — aucun sac ne ressemble à un autre.",
+        "details": ["Tissu tapis marocain authentique", "Anses cuir véritable", "Pièce unique", "Fait main au Maroc"],
+        "whatsapp_msg": "Bonjour, je souhaite commander un Sac à Main Femme Barbaria Morocco.",
+        "order": "Commander sur WhatsApp",
+        "instagram": "Voir sur Instagram"
+      },
+      "sac_homme": {
+        "name": "Sac Bandoulière Homme",
+        "tagline": "Avec Pins exclusifs",
+        "description": "Sac bandoulière pour homme en tissu berbère avec cuir camel. Livré avec des pins exclusifs Barbaria — motifs de tapis marocains en émail doré. Authenticité et luxe.",
+        "details": ["Tissu berbère et cuir camel", "Pins émail doré inclus", "Fermeture à glissière", "Fait main au Maroc"],
+        "whatsapp_msg": "Bonjour, je souhaite commander un Sac Bandoulière Homme Barbaria Morocco.",
+        "order": "Commander sur WhatsApp",
+        "instagram": "Voir sur Instagram"
+      },
+      "pouche": {
+        "name": "Pouche",
+        "tagline": "L'art du Maroc en miniature",
+        "description": "Pochette en tissu berbère avec motifs géométriques brodés à la main. Parfaite comme trousse de maquillage ou accessoire de voyage. Pièce unique.",
+        "details": ["Tissu berbère naturel", "Broderie géométrique main", "Fermeture zip", "Pièce unique"],
+        "whatsapp_msg": "Bonjour, je souhaite commander une Pouche Barbaria Morocco.",
+        "order": "Commander sur WhatsApp",
+        "instagram": "Voir sur Instagram"
+      },
+      "pins": {
+        "name": "Pins par Collection",
+        "tagline": "L'art du Maroc en miniature",
+        "description": "Collections de pins rendant hommage au patrimoine de chaque ville marocaine. Fès, Marrakech, Casablanca, Sahara, Essaouira, Nord/Chamal — chaque ville a ses symboles.",
+        "collections": ["Collection Fès — Chapeau Fassi, Babouche, Takchita", "Collection Marrakech — Tanjia, Koutoubia, Palmier", "Collection Nord/Chamal — Cap Spartel, Chefchaouen, Barque", "Collection Casablanca — Hassan II, Tramway, Corniche", "Collection Sahara — Dromadaire, Bivouac, Touareg", "Collection Essaouira — Mouette, Forteresse, Gnawa"],
+        "whatsapp_msg": "Bonjour, je souhaite commander des Pins Barbaria Morocco.",
+        "order": "Commander sur WhatsApp",
+        "instagram": "Voir sur Instagram"
+      }
+    }
+  },
+  "food": {
+    "title": "Alimentaire",
+    "subtitle": "Bientôt disponible",
+    "desc": "Épices marocaines, coffrets cadeaux et saveurs du terroir. Une nouvelle collection en cours de préparation.",
+    "notify": "Être notifié du lancement",
+    "notify_msg": "Bonjour, je souhaite être notifié du lancement de la gamme Alimentaire Barbaria Morocco.",
+    "whatsapp": "Nous contacter sur WhatsApp"
   },
   "about": {
     "title": "Notre Histoire",
     "subtitle": "Barbaria Morocco",
-    "story_1": "Née au cœur du Maroc, Barbaria Morocco est une marque de cosmétiques naturels fondée sur une conviction profonde : les meilleurs soins de beauté sont ceux que la nature a déjà créés.",
-    "story_2": "Nous travaillons directement avec des coopératives berbères et des artisans locaux pour sélectionner les ingrédients les plus purs : Huile d'Argan pressée à froid, Savon Noir traditionnel, Fleur d'oranger distillée à la vapeur.",
-    "story_3": "Chaque produit Barbaria Morocco est formulé sans produits chimiques agressifs, sans perturbateurs endocriniens, et conditionné de manière responsable. La beauté naturelle, c'est notre héritage.",
+    "story_1": "Née au cœur du Maroc, Barbaria Morocco est une marque fondée sur une conviction profonde : les meilleures créations sont celles que la nature et les mains humaines ont façonnées ensemble.",
+    "story_2": "Nous travaillons directement avec des coopératives berbères et des artisans locaux — des femmes tisserandes, des maîtres du savon, des presseurs d'huile — pour créer des produits qui portent une histoire vraie.",
+    "story_3": "Porter ou utiliser un produit Barbaria, c'est adopter un morceau d'histoire marocaine et soutenir un impact social concret sur les familles artisanes.",
     "values_title": "Nos Valeurs",
     "values": {
-      "natural": { "title": "Naturel", "desc": "100% d'ingrédients d'origine naturelle, sans parabènes ni sulfates." },
-      "artisanal": { "title": "Artisanal", "desc": "Fabriqué à la main par des artisans marocains selon des recettes traditionnelles." },
-      "moroccan": { "title": "Marocain", "desc": "Ancré dans le patrimoine de beauté du Maroc, du Sahara à l'Atlas." }
+      "natural": { "title": "Naturel", "desc": "Ingrédients 100% d'origine naturelle, sans parabènes ni sulfates." },
+      "artisanal": { "title": "Artisanal", "desc": "Fabriqué à la main par des artisans marocains selon des recettes et techniques ancestrales." },
+      "moroccan": { "title": "Marocain", "desc": "Ancré dans le patrimoine du Maroc — du Sahara à l'Atlas, de Fès à Essaouira." }
     },
     "gallery_title": "En Images"
   },
@@ -108,7 +179,8 @@
     "email_label": "Email"
   },
   "footer": {
-    "tagline": "Cosmétiques naturels du Maroc",
+    "tagline": "L'authenticité marocaine. La rareté d'une création.",
+    "collections": "Collections",
     "links": "Liens",
     "follow": "Nous suivre",
     "copyright": "© 2026 Barbaria Morocco. Tous droits réservés."

@@ -3,9 +3,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { MessageCircle } from "lucide-react";
-import { FaInstagram } from "react-icons/fa";
-import { WHATSAPP_NUMBER, INSTAGRAM_HANDLE } from "@/components/Navbar";
+import { ArrowRight } from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -13,196 +11,172 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "hero" });
+  const t = await getTranslations({ locale, namespace: "home" });
   return {
-    title: "Barbaria Morocco — Cosmétiques Naturels du Maroc",
+    title: "Barbaria Morocco — L'authenticité marocaine",
     description: t("subheadline"),
     openGraph: { images: [{ url: "/brand_photos/products-all-three.jpg" }] },
   };
 }
 
+const categories = [
+  {
+    key: "cosmetics" as const,
+    href: "/cosmetics",
+    photo: "/brand_photos/argan-oil-dropper.jpg",
+    accent: "#E299A1",
+    accentGlass: "rgba(226,153,161,0.18)",
+    border: "rgba(226,153,161,0.4)",
+    btnClass: "btn-glass-pink",
+  },
+  {
+    key: "textile" as const,
+    href: "/textile",
+    photo: "/brand_photos/gift-box-open.jpg",
+    accent: "#A0856A",
+    accentGlass: "rgba(160,133,106,0.18)",
+    border: "rgba(160,133,106,0.4)",
+    btnClass: "btn-glass-leather",
+  },
+  {
+    key: "food" as const,
+    href: "/food",
+    photo: "/brand_photos/sugar-scrub-ingredients.jpg",
+    accent: "#C4840A",
+    accentGlass: "rgba(196,132,10,0.18)",
+    border: "rgba(196,132,10,0.35)",
+    btnClass: "btn-glass-gold",
+  },
+];
+
 function HeroSection() {
-  const t = useTranslations("hero");
+  const t = useTranslations("home");
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <Image
-        src="/brand_photos/products-all-three.jpg"
-        alt="Barbaria Morocco products"
+        src="/brand_photos/brand-lifestyle-5.jpg"
+        alt="Barbaria Morocco"
         fill
         priority
-        className="object-cover scale-105"
+        className="object-cover"
         sizes="100vw"
       />
-      {/* layered blur gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A1A]/50 via-[#1A1A1A]/30 to-[#1A1A1A]/60" />
-      <div className="absolute inset-0 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#2C1A0E]/60 via-[#2C1A0E]/35 to-[#2C1A0E]/70" />
+      <div className="absolute inset-0 backdrop-blur-[1px]" />
 
-      <div className="relative z-10 text-center text-[#FDFCF8] px-6 max-w-3xl mx-auto">
-        <p className="animate-fade-in-up text-xs tracking-[0.5em] uppercase mb-6 text-[#E299A1]">
+      <div className="relative z-10 text-center text-[#F7F2EA] px-6 max-w-4xl mx-auto">
+        <p className="animate-fade-in-up text-xs tracking-[0.5em] uppercase mb-6 text-[#C9963A]">
           {t("tagline")}
         </p>
-        <h1 className="animate-fade-in-up animation-delay-200 font-playfair text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
+        <h1 className="animate-fade-in-up animation-delay-200 font-playfair text-6xl md:text-8xl font-bold mb-6 leading-tight drop-shadow-lg">
           {t("headline")}
         </h1>
-        <p className="animate-fade-in-up animation-delay-400 text-base md:text-lg text-[#FDFCF8]/85 mb-10 leading-relaxed max-w-xl mx-auto">
+        <p className="animate-fade-in-up animation-delay-400 text-base md:text-lg text-[#F7F2EA]/80 mb-12 leading-relaxed max-w-xl mx-auto">
           {t("subheadline")}
         </p>
         <div className="animate-fade-in-up animation-delay-600">
-          <Link href="/products">
-            <button className="btn-glass-pink px-10 py-3.5 text-sm tracking-[0.2em] uppercase font-medium rounded-full">
+          <a href="#collections">
+            <button className="btn-glass-gold px-10 py-3.5 text-sm tracking-[0.2em] uppercase font-medium rounded-full">
               {t("cta")}
             </button>
-          </Link>
+          </a>
         </div>
       </div>
 
-      {/* scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in-up animation-delay-600">
-        <div className="w-px h-12 bg-gradient-to-b from-transparent to-[#E299A1]/70" />
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-in-up animation-delay-600">
+        <div className="w-px h-12 bg-gradient-to-b from-transparent to-[#C9963A]/70" />
       </div>
     </section>
   );
 }
 
-const products = [
-  { key: "argan" as const, photo: "/brand_photos/argan-oil-dropper.jpg", anchor: "argan-oil" },
-  { key: "savon" as const, photo: "/brand_photos/savon-noir-2.jpg", anchor: "savon-noir" },
-  { key: "scrub" as const, photo: "/brand_photos/sugar-scrub-ingredients.jpg", anchor: "sugar-scrub" },
-];
-
-function FeaturedProducts() {
-  const t = useTranslations("featured");
-  const pt = useTranslations("products");
+function CategoryCards() {
+  const t = useTranslations("home");
 
   return (
-    <section className="py-28 px-6 max-w-6xl mx-auto">
+    <section id="collections" className="py-28 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">{t("title")}</h2>
-        <p className="text-[#6B6B6B] max-w-lg mx-auto">{t("subtitle")}</p>
+        <p className="text-xs tracking-[0.4em] uppercase text-[#C9963A] mb-4">Barbaria Morocco</p>
+        <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#2C1A0E] mb-4">
+          Nos Collections
+        </h2>
+        <div className="w-16 h-px bg-[#C9963A] mx-auto" />
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {products.map(({ key, photo, anchor }) => (
-          <div key={key} className="group card-hover">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm mb-5">
-              <Image
-                src={photo}
-                alt={pt(`${key}.name`)}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-108"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              {/* glass overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-              <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400">
-                <Link href={`/products#${anchor}`}>
-                  <button className="btn-glass-outline w-full py-2.5 text-xs tracking-widest uppercase rounded-full">
-                    {t("view")}
-                  </button>
-                </Link>
-              </div>
-            </div>
-            <div className="px-1">
-              <p className="text-xs tracking-widest uppercase text-[#E299A1] mb-1">
-                {pt(`${key}.tagline`)}
-              </p>
-              <div className="flex items-center justify-between">
-                <h3 className="font-playfair text-xl font-bold">{pt(`${key}.name`)}</h3>
-                <span className="text-sm font-medium text-[#6B6B6B]">{pt(`${key}.price`)}</span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
+        {categories.map(({ key, href, photo, accentGlass, border, btnClass }) => {
+          const label = t(`categories.${key}.label`);
+          const tagline = t(`categories.${key}.tagline`);
+          const desc = t(`categories.${key}.desc`);
+          const cta = t(`categories.${key}.cta`);
 
-const ingredients = [
-  { key: "argan" as const, photo: "/brand_photos/sugar-scrub-ingredients.jpg" },
-  { key: "orange" as const, photo: "/brand_photos/brand-lifestyle-3.jpg" },
-  { key: "nila" as const, photo: "/brand_photos/sugar-scrub-hammam.jpg" },
-];
-
-function IngredientSpotlight() {
-  const t = useTranslations("ingredients");
-
-  return (
-    <section className="py-24 px-6 bg-[#EAE7DC]/20">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">{t("title")}</h2>
-          <p className="text-[#6B6B6B]">{t("subtitle")}</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {ingredients.map(({ key, photo }) => (
-            <div key={key} className="group overflow-hidden rounded-sm card-hover">
-              <div className="relative aspect-[4/3] overflow-hidden">
+          return (
+            <Link key={key} href={href} className="group block card-hover">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
                 <Image
                   src={photo}
-                  alt={t(`${key}.name`)}
+                  alt={label}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/70 via-[#1A1A1A]/20 to-transparent" />
-                {/* glass card at bottom */}
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <div className="glass-dark rounded-sm p-4">
-                    <h3 className="font-playfair text-lg font-bold text-[#FDFCF8] mb-1">
-                      {t(`${key}.name`)}
-                    </h3>
-                    <p className="text-xs text-[#FDFCF8]/75 leading-relaxed">
-                      {t(`${key}.desc`)}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2C1A0E]/80 via-[#2C1A0E]/20 to-transparent" />
+
+                {/* Content overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div
+                    className="rounded-sm p-5"
+                    style={{
+                      background: accentGlass,
+                      backdropFilter: "blur(16px)",
+                      WebkitBackdropFilter: "blur(16px)",
+                      border: `1px solid ${border}`,
+                    }}
+                  >
+                    <p className="text-xs tracking-[0.3em] uppercase text-[#F7F2EA]/70 mb-1">
+                      {tagline}
                     </p>
+                    <h3 className="font-playfair text-2xl font-bold text-[#F7F2EA] mb-2">
+                      {label}
+                    </h3>
+                    <p className="text-sm text-[#F7F2EA]/75 leading-relaxed mb-4">{desc}</p>
+                    <button
+                      className={`${btnClass} px-5 py-2 text-xs tracking-widest uppercase rounded-full flex items-center gap-2`}
+                    >
+                      {cta} <ArrowRight size={13} />
+                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );
 }
 
-function CTABanner() {
-  const t = useTranslations("cta_banner");
-
+function BrandStripSection() {
   return (
-    <section className="relative py-28 px-6 overflow-hidden">
+    <section className="relative py-28 overflow-hidden">
       <Image
-        src="/brand_photos/gift-box-open.jpg"
-        alt="Barbaria gift set"
+        src="/brand_photos/brand-lifestyle-4.jpg"
+        alt="Barbaria Morocco artisans"
         fill
         className="object-cover"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-[#1A1A1A]/55 backdrop-blur-[3px]" />
-      <div className="relative z-10 max-w-2xl mx-auto text-center text-[#FDFCF8]">
-        <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 drop-shadow">{t("title")}</h2>
-        <p className="text-[#FDFCF8]/75 mb-10">{t("subtitle")}</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="btn-glass-pink px-8 py-3.5 text-sm tracking-wider uppercase rounded-full flex items-center gap-2 w-full sm:w-auto justify-center">
-              <MessageCircle size={16} />
-              {t("whatsapp")}
-            </button>
-          </a>
-          <a
-            href={`https://instagram.com/${INSTAGRAM_HANDLE}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="btn-glass-outline px-8 py-3.5 text-sm tracking-wider uppercase rounded-full flex items-center gap-2 w-full sm:w-auto justify-center">
-              <FaInstagram size={16} />
-              {t("instagram")}
-            </button>
-          </a>
-        </div>
+      <div className="absolute inset-0 bg-[#2C1A0E]/60 backdrop-blur-[2px]" />
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-[#F7F2EA]">
+        <p className="text-xs tracking-[0.5em] uppercase text-[#C9963A] mb-6">Notre engagement</p>
+        <h2 className="font-playfair text-3xl md:text-5xl font-bold mb-6 leading-tight">
+          "Every bag has a story.<br />Every story changes a life."
+        </h2>
+        <p className="text-[#F7F2EA]/75 max-w-xl mx-auto leading-relaxed">
+          En collaborant directement avec des artisanes marocaines, nous les aidons à vivre
+          dignement de leur savoir-faire, à soutenir leurs familles et à offrir un avenir meilleur
+          à leurs enfants.
+        </p>
       </div>
     </section>
   );
@@ -212,9 +186,8 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <FeaturedProducts />
-      <IngredientSpotlight />
-      <CTABanner />
+      <CategoryCards />
+      <BrandStripSection />
     </>
   );
 }

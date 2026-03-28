@@ -1,92 +1,163 @@
 {
   "nav": {
     "home": "Home",
-    "products": "Products",
+    "cosmetics": "Cosmetics",
+    "textile": "Textile",
+    "food": "Food",
     "about": "About",
     "contact": "Contact",
-    "order": "Order"
+    "collections": "Collections"
   },
-  "hero": {
-    "tagline": "Natural Cosmetics from Morocco",
-    "headline": "The Essence of Morocco",
-    "subheadline": "Natural, handcrafted beauty care inspired by Morocco's rich heritage. Argan, Orange Blossom, Nila.",
-    "cta": "Discover our products"
-  },
-  "featured": {
-    "title": "Our Products",
-    "subtitle": "A premium skincare collection, formulated with the finest ingredients from Morocco.",
-    "view": "View product"
-  },
-  "ingredients": {
-    "title": "Our Ingredients",
-    "subtitle": "Straight from the heart of Morocco.",
-    "argan": {
-      "name": "Pure Argan",
-      "desc": "Cold-pressed at Berber cooperatives in the Atlas mountains. Rich in vitamin E and essential fatty acids."
-    },
-    "orange": {
-      "name": "Orange Blossom",
-      "desc": "Steam-distilled. Soothing, regenerating, with a delicate floral fragrance."
-    },
-    "nila": {
-      "name": "Nila",
-      "desc": "A natural blue pigment used for centuries in North African skincare. Purifying and detoxifying."
+  "home": {
+    "tagline": "Moroccan authenticity. The rarity of a creation.",
+    "headline": "Barbaria Morocco",
+    "subheadline": "Three worlds. One heritage — artisanal, natural, living Morocco.",
+    "cta": "Discover our collections",
+    "categories": {
+      "cosmetics": {
+        "label": "Cosmetics",
+        "tagline": "Natural skincare",
+        "desc": "Argan Oil, Black Soap, Sugar Body Scrub — formulated by Berber craftswomen.",
+        "cta": "Discover"
+      },
+      "textile": {
+        "label": "Textile",
+        "tagline": "100% handmade",
+        "desc": "Unique bags and pouches woven from traditional Moroccan carpet fabric.",
+        "cta": "Discover"
+      },
+      "food": {
+        "label": "Food",
+        "tagline": "Coming soon",
+        "desc": "Spices, gift boxes and flavors of Morocco — a new collection coming soon.",
+        "cta": "Get notified"
+      }
     }
   },
-  "cta_banner": {
-    "title": "Ready to order?",
-    "subtitle": "Contact us directly on WhatsApp or Instagram.",
-    "whatsapp": "Order on WhatsApp",
-    "instagram": "Follow us on Instagram"
-  },
-  "products": {
-    "title": "Our Collection",
-    "subtitle": "Three essential skincare products, one philosophy: natural Moroccan beauty.",
-    "argan": {
-      "name": "Argan Oil",
-      "tagline": "Liquid gold from Morocco",
-      "description": "Our pure Argan Oil is cold-pressed from carefully selected argan kernels. Perfect for nourishing skin, enhancing hair, and strengthening nails. Non-greasy and fast-absorbing.",
-      "ingredients": ["Pure Argan (Argania Spinosa)"],
-      "volume": "30ml",
-      "price": "€45",
-      "whatsapp_msg": "Hello, I would like to order the Barbaria Morocco Argan Oil.",
-      "order": "Order on WhatsApp",
-      "instagram": "View on Instagram"
+  "cosmetics": {
+    "title": "Natural Cosmetics",
+    "subtitle": "Premium skincare formulated with the finest ingredients from Morocco, by hands that know.",
+    "tagline_page": "Clean beauty · Made in Morocco",
+    "featured_title": "Our Products",
+    "view": "View product",
+    "products": {
+      "argan": {
+        "name": "Pure Argan Oil",
+        "tagline": "Liquid gold from Morocco",
+        "description": "Cold-pressed from carefully selected argan kernels at Berber cooperatives in the Atlas mountains. Perfect for nourishing skin, enhancing hair, and strengthening nails. Non-greasy and fast-absorbing.",
+        "ingredients": ["Pure Argan (Argania Spinosa)"],
+        "volume": "30ml",
+        "price": "€45",
+        "whatsapp_msg": "Hello, I would like to order Barbaria Morocco Pure Argan Oil.",
+        "order": "Order on WhatsApp",
+        "instagram": "View on Instagram"
+      },
+      "savon": {
+        "name": "Beldi Black Soap",
+        "tagline": "Authentic hammam ritual",
+        "description": "Traditional Moroccan black soap enriched with Orange Blossom and Nila. A natural exfoliant that deeply purifies, brightens skin, and prepares it for treatment. 100% natural, no additives.",
+        "ingredients": ["Saponified Olive Oil", "Orange Blossom", "Nila"],
+        "volume": "200ml",
+        "price": "€28",
+        "whatsapp_msg": "Hello, I would like to order Barbaria Morocco Beldi Black Soap.",
+        "order": "Order on WhatsApp",
+        "instagram": "View on Instagram"
+      },
+      "scrub": {
+        "name": "Sugar Body Scrub",
+        "tagline": "Gentle body exfoliator",
+        "description": "Our sugar body scrub combines the gentle exfoliating power of sugar with Argan oil nourishment, Orange Blossom softness, and the purity of Nila. Smooth, soft, glowing skin.",
+        "ingredients": ["Sugar", "Argan Oil", "Orange Blossom", "Nila"],
+        "volume": "300ml",
+        "price": "€35",
+        "whatsapp_msg": "Hello, I would like to order Barbaria Morocco Sugar Body Scrub.",
+        "order": "Order on WhatsApp",
+        "instagram": "View on Instagram"
+      },
+      "saad": {
+        "name": "Saad Oil",
+        "tagline": "The natural laser",
+        "description": "Extracted from Cyperus Esculentus — Moroccan Saad — cold-pressed. Stimulates scalp microcirculation, reactivates dormant hair follicles, and targets thinning areas. Visible results in 4 to 8 weeks.",
+        "ingredients": ["100% pure Cyperus Esculentus (Saad)"],
+        "volume": "30ml",
+        "price": "On request",
+        "whatsapp_msg": "Hello, I would like to order Barbaria Morocco Saad Oil.",
+        "order": "Order on WhatsApp",
+        "instagram": "View on Instagram"
+      }
     },
-    "savon": {
-      "name": "Black Soap",
-      "tagline": "Authentic hammam ritual",
-      "description": "Traditional Moroccan black soap enriched with Orange Blossom and Nila. A natural exfoliant that deeply purifies, brightens your complexion, and prepares skin for treatment. Bring the hammam ritual home.",
-      "ingredients": ["Saponified Olive Oil", "Orange Blossom", "Nila"],
-      "volume": "200ml",
-      "price": "€28",
-      "whatsapp_msg": "Hello, I would like to order the Barbaria Morocco Black Soap.",
-      "order": "Order on WhatsApp",
-      "instagram": "View on Instagram"
-    },
-    "scrub": {
-      "name": "Sugar Body Scrub",
-      "tagline": "Gentle body exfoliator",
-      "description": "Our sugar body scrub combines the gentle exfoliating power of sugar with the nourishing benefits of Argan oil, the floral softness of Orange Blossom, and the purity of Nila. Smooth, soft, glowing skin.",
-      "ingredients": ["Sugar", "Argan Oil", "Orange Blossom", "Nila"],
-      "volume": "300ml",
-      "price": "€35",
-      "whatsapp_msg": "Hello, I would like to order the Barbaria Morocco Sugar Body Scrub.",
-      "order": "Order on WhatsApp",
-      "instagram": "View on Instagram"
+    "ingredients": {
+      "title": "Our Ingredients",
+      "subtitle": "Straight from the heart of Morocco.",
+      "argan": { "name": "Pure Argan", "desc": "Cold-pressed at Berber cooperatives in the Atlas. Rich in vitamin E and essential fatty acids." },
+      "orange": { "name": "Orange Blossom", "desc": "Steam-distilled. Soothing, regenerating, with a delicate floral fragrance." },
+      "nila": { "name": "Nila", "desc": "A natural blue pigment used for centuries in North African skincare. Purifying and detoxifying." }
     }
+  },
+  "textile": {
+    "title": "Artisanal Textile",
+    "subtitle": "Every Moroccan carpet carries a story. We give it a new life.",
+    "tagline_page": "100% handmade · Made in Morocco",
+    "story": "Patterns passed through generations, artisan hands that have woven dreams, traditions and emotions for centuries. At Barbaria Morocco, we transform these precious fabrics into unique pieces.",
+    "impact": "Carrying a Barbaria bag means adopting a piece of history and taking part in a real social impact.",
+    "products": {
+      "sac_femme": {
+        "name": "Women's Handbag",
+        "tagline": "The elegance of a story",
+        "description": "Entirely handmade from authentic Moroccan carpet fabric. Genuine leather handles. Each piece is unique — no two bags are alike.",
+        "details": ["Authentic Moroccan carpet fabric", "Genuine leather handles", "One-of-a-kind piece", "Handmade in Morocco"],
+        "whatsapp_msg": "Hello, I would like to order a Barbaria Morocco Women's Handbag.",
+        "order": "Order on WhatsApp",
+        "instagram": "View on Instagram"
+      },
+      "sac_homme": {
+        "name": "Men's Shoulder Bag",
+        "tagline": "With exclusive Pins",
+        "description": "Men's shoulder bag in Berber fabric with camel leather. Comes with exclusive Barbaria pins — gold enamel Moroccan carpet motifs. Authenticity and luxury.",
+        "details": ["Berber fabric and camel leather", "Gold enamel pins included", "Zip closure", "Handmade in Morocco"],
+        "whatsapp_msg": "Hello, I would like to order a Barbaria Morocco Men's Shoulder Bag.",
+        "order": "Order on WhatsApp",
+        "instagram": "View on Instagram"
+      },
+      "pouche": {
+        "name": "Pouche",
+        "tagline": "Moroccan art in miniature",
+        "description": "Berber fabric pouch with hand-embroidered geometric patterns. Perfect as a makeup bag or travel accessory. One-of-a-kind piece.",
+        "details": ["Natural Berber fabric", "Hand-embroidered geometry", "Zip closure", "Unique piece"],
+        "whatsapp_msg": "Hello, I would like to order a Barbaria Morocco Pouche.",
+        "order": "Order on WhatsApp",
+        "instagram": "View on Instagram"
+      },
+      "pins": {
+        "name": "Pins by Collection",
+        "tagline": "Moroccan art in miniature",
+        "description": "Pin collections paying tribute to the heritage of each Moroccan city. Fès, Marrakech, Casablanca, Sahara, Essaouira, North/Chamal — each city has its symbols.",
+        "collections": ["Fès Collection — Fassi Hat, Babouche, Takchita", "Marrakech Collection — Tanjia, Koutoubia, Palm Tree", "North/Chamal — Cap Spartel, Chefchaouen, Fishing Boat", "Casablanca — Hassan II Mosque, Tramway, Corniche", "Sahara — Dromedary, Bivouac, Touareg", "Essaouira — Seagull, Fortress, Gnawa"],
+        "whatsapp_msg": "Hello, I would like to order Barbaria Morocco Pins.",
+        "order": "Order on WhatsApp",
+        "instagram": "View on Instagram"
+      }
+    }
+  },
+  "food": {
+    "title": "Food",
+    "subtitle": "Coming soon",
+    "desc": "Moroccan spices, gift boxes and flavors of the land. A new collection in preparation.",
+    "notify": "Get notified at launch",
+    "notify_msg": "Hello, I would like to be notified of the launch of the Barbaria Morocco Food range.",
+    "whatsapp": "Contact us on WhatsApp"
   },
   "about": {
     "title": "Our Story",
     "subtitle": "Barbaria Morocco",
-    "story_1": "Born in the heart of Morocco, Barbaria Morocco is a natural cosmetics brand built on a deep conviction: the best beauty care is what nature has already created.",
-    "story_2": "We work directly with Berber cooperatives and local artisans to select the purest ingredients: cold-pressed Argan Oil, traditional Black Soap, steam-distilled Orange Blossom.",
-    "story_3": "Every Barbaria Morocco product is formulated without harsh chemicals or endocrine disruptors, and packaged responsibly. Natural beauty is our heritage.",
+    "story_1": "Born in the heart of Morocco, Barbaria Morocco is a brand built on a deep conviction: the finest creations are those shaped together by nature and human hands.",
+    "story_2": "We work directly with Berber cooperatives and local artisans — women weavers, soap masters, oil pressers — to create products that carry a true story.",
+    "story_3": "Using or wearing a Barbaria product means adopting a piece of Moroccan history and supporting a real social impact on artisan families.",
     "values_title": "Our Values",
     "values": {
       "natural": { "title": "Natural", "desc": "100% natural origin ingredients, free from parabens and sulfates." },
-      "artisanal": { "title": "Artisanal", "desc": "Handmade by Moroccan craftspeople following traditional recipes." },
-      "moroccan": { "title": "Moroccan", "desc": "Rooted in Morocco's beauty heritage, from the Sahara to the Atlas mountains." }
+      "artisanal": { "title": "Artisanal", "desc": "Handmade by Moroccan artisans using ancestral recipes and techniques." },
+      "moroccan": { "title": "Moroccan", "desc": "Rooted in Morocco's heritage — from the Sahara to the Atlas, from Fès to Essaouira." }
     },
     "gallery_title": "In Photos"
   },
@@ -108,7 +179,8 @@
     "email_label": "Email"
   },
   "footer": {
-    "tagline": "Natural cosmetics from Morocco",
+    "tagline": "Moroccan authenticity. The rarity of a creation.",
+    "collections": "Collections",
     "links": "Links",
     "follow": "Follow us",
     "copyright": "© 2026 Barbaria Morocco. All rights reserved."

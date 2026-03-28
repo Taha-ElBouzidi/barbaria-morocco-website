@@ -20,11 +20,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Barbaria Morocco — Cosmétiques Naturels du Maroc",
+    default: "Barbaria Morocco — L'authenticité marocaine",
     template: "%s | Barbaria Morocco",
   },
   description:
-    "Découvrez Barbaria Morocco : Huile d'Argan, Savon Noir et Sugar Body Scrub premium. Cosmétiques naturels artisanaux du Maroc.",
+    "Découvrez Barbaria Morocco : cosmétiques naturels, textile artisanal et produits alimentaires du terroir marocain.",
   openGraph: {
     siteName: "Barbaria Morocco",
     images: [{ url: "/brand_photos/products-all-three.jpg" }],
@@ -48,7 +48,7 @@ export default async function LocaleLayout({
       lang={locale}
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#FDFCF8] text-[#1A1A1A]">
+      <body className="min-h-full flex flex-col bg-[#F7F2EA] text-[#2C1A0E]">
         <NextIntlClientProvider locale={locale}>
           <Navbar locale={locale} />
           <main className="flex-1">{children}</main>

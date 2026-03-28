@@ -50,9 +50,9 @@ export default function AboutPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#1A1A1A]/50" />
-        <div className="relative z-10 text-center text-[#FDFCF8] px-6">
-          <p className="text-xs tracking-[0.4em] uppercase text-[#E299A1] mb-4">
+        <div className="absolute inset-0 bg-[#2C1A0E]/55" />
+        <div className="relative z-10 text-center text-[#F7F2EA] px-6">
+          <p className="text-xs tracking-[0.4em] uppercase text-[#C9963A] mb-4">
             {t("subtitle")}
           </p>
           <h1 className="font-playfair text-5xl md:text-7xl font-bold">
@@ -64,20 +64,20 @@ export default function AboutPage() {
       {/* Story */}
       <section className="max-w-3xl mx-auto px-6 py-24">
         <div className="space-y-8">
-          <p className="text-lg leading-relaxed text-[#1A1A1A]/80">
+          <p className="text-lg leading-relaxed text-[#2C1A0E]/80">
             {t("story_1")}
           </p>
-          <p className="text-lg leading-relaxed text-[#1A1A1A]/80">
+          <p className="text-lg leading-relaxed text-[#2C1A0E]/80">
             {t("story_2")}
           </p>
-          <p className="text-lg leading-relaxed text-[#1A1A1A]/80">
+          <p className="text-lg leading-relaxed text-[#2C1A0E]/80">
             {t("story_3")}
           </p>
         </div>
       </section>
 
       {/* Values */}
-      <section className="bg-[#1A1A1A] text-[#FDFCF8] py-24 px-6">
+      <section className="bg-[#2C1A0E] text-[#F7F2EA] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-playfair text-4xl font-bold text-center mb-16">
             {t("values_title")}
@@ -87,13 +87,13 @@ export default function AboutPage() {
               const Icon = valueIcons[key];
               return (
                 <div key={key} className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 border border-[#E299A1] rounded-full mb-6">
-                    <Icon size={20} className="text-[#E299A1]" />
+                  <div className="inline-flex items-center justify-center w-12 h-12 border border-[#C9963A] rounded-full mb-6">
+                    <Icon size={20} className="text-[#C9963A]" />
                   </div>
                   <h3 className="font-playfair text-2xl font-bold mb-3">
                     {t(`values.${key}.title`)}
                   </h3>
-                  <p className="text-[#FDFCF8]/70 text-sm leading-relaxed">
+                  <p className="text-[#F7F2EA]/70 text-sm leading-relaxed">
                     {t(`values.${key}.desc`)}
                   </p>
                 </div>
@@ -105,12 +105,12 @@ export default function AboutPage() {
 
       {/* Photo gallery */}
       <section className="py-24 px-6 max-w-6xl mx-auto">
-        <h2 className="font-playfair text-4xl font-bold text-center mb-16">
+        <h2 className="font-playfair text-4xl font-bold text-center text-[#2C1A0E] mb-16">
           {t("gallery_title")}
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {galleryPhotos.map(({ src, alt }) => (
-            <div key={src} className="relative aspect-square overflow-hidden">
+            <div key={src} className="relative aspect-square overflow-hidden rounded-sm">
               <Image
                 src={src}
                 alt={alt}

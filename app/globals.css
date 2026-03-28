@@ -13,8 +13,6 @@
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -28,31 +26,45 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) * 1.4);
 
-  /* Barbaria brand colors */
-  --color-pink: #E299A1;
-  --color-pink-light: #F0C4CA;
-  --color-cream: #FDFCF8;
-  --color-gold: #D4AF37;
-  --color-obsidian: #1A1A1A;
-  --color-sand: #EAE7DC;
+  /* === BARBARIA BRAND PALETTE === */
+
+  /* Global — Moroccan Desert */
+  --color-sand:        #F7F2EA;   /* warm cream background */
+  --color-sand-dark:   #EAD9C0;   /* secondary sand */
+  --color-espresso:    #2C1A0E;   /* deep dark brown */
+  --color-gold:        #C9963A;   /* rich Moroccan gold */
+  --color-gold-light:  #E8C97A;   /* light gold */
+  --color-taupe:       #9B8B7A;   /* warm muted text */
+  --color-linen:       #EDE4D0;   /* natural linen */
+  --color-terracotta:  #C86446;   /* warm terracotta */
+
+  /* Cosmetics accent — Pink */
+  --color-pink:        #E299A1;
+  --color-pink-light:  #F0C4CA;
+
+  /* Textile accent — Leather/Tan */
+  --color-leather:     #A0856A;
+  --color-leather-light: #D4C5A9;
+
+  /* Food accent — Saffron/Spice */
+  --color-saffron:     #C4840A;
+  --color-saffron-light: #E8B94F;
 }
 
 :root {
-  --background: #FDFCF8;
-  --foreground: #1A1A1A;
+  --background: #F7F2EA;
+  --foreground: #2C1A0E;
   --card: #FFFFFF;
-  --card-foreground: #1A1A1A;
-  --primary: #1A1A1A;
-  --primary-foreground: #FDFCF8;
-  --secondary: #EAE7DC;
-  --secondary-foreground: #1A1A1A;
-  --muted: #EAE7DC;
-  --muted-foreground: #6B6B6B;
-  --accent: #E299A1;
-  --accent-foreground: #FDFCF8;
-  --border: #E5E0D5;
-  --input: #E5E0D5;
-  --ring: #E299A1;
+  --card-foreground: #2C1A0E;
+  --primary: #2C1A0E;
+  --primary-foreground: #F7F2EA;
+  --secondary: #EAD9C0;
+  --secondary-foreground: #2C1A0E;
+  --muted: #EDE4D0;
+  --muted-foreground: #9B8B7A;
+  --border: #DDD0BC;
+  --input: #DDD0BC;
+  --ring: #C9963A;
   --destructive: oklch(0.577 0.245 27.325);
   --radius: 0.5rem;
 }
@@ -79,89 +91,116 @@
     font-family: var(--font-playfair), serif;
   }
 
-  /* Glass panel — light background context */
+  /* Glass — warm sand context */
   .glass {
-    background: rgba(253, 252, 248, 0.55);
+    background: rgba(247, 242, 234, 0.60);
     backdrop-filter: blur(16px) saturate(1.4);
     -webkit-backdrop-filter: blur(16px) saturate(1.4);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255,255,255,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    box-shadow: 0 4px 24px rgba(44, 26, 14, 0.06), inset 0 1px 0 rgba(255,255,255,0.6);
   }
 
-  /* Glass panel — dark background context */
+  /* Glass — dark espresso context */
   .glass-dark {
-    background: rgba(26, 26, 26, 0.45);
+    background: rgba(44, 26, 14, 0.50);
     backdrop-filter: blur(20px) saturate(1.6);
     -webkit-backdrop-filter: blur(20px) saturate(1.6);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
   }
 
-  /* Glass button — pink */
-  .btn-glass-pink {
-    background: rgba(226, 153, 161, 0.75);
+  /* Gold glass button */
+  .btn-glass-gold {
+    background: rgba(201, 150, 58, 0.80);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(240, 196, 202, 0.5);
+    border: 1px solid rgba(232, 201, 122, 0.50);
+    box-shadow: 0 2px 16px rgba(201, 150, 58, 0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+    color: #fff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-glass-gold:hover {
+    background: rgba(201, 150, 58, 0.95);
+    box-shadow: 0 4px 24px rgba(201, 150, 58, 0.55), inset 0 1px 0 rgba(255,255,255,0.3);
+    transform: translateY(-1px);
+  }
+
+  /* Pink glass button (cosmetics) */
+  .btn-glass-pink {
+    background: rgba(226, 153, 161, 0.80);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(240, 196, 202, 0.50);
     box-shadow: 0 2px 16px rgba(226, 153, 161, 0.35), inset 0 1px 0 rgba(255,255,255,0.25);
     color: #fff;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-glass-pink:hover {
-    background: rgba(226, 153, 161, 0.92);
+    background: rgba(226, 153, 161, 0.95);
     box-shadow: 0 4px 24px rgba(226, 153, 161, 0.5), inset 0 1px 0 rgba(255,255,255,0.3);
     transform: translateY(-1px);
   }
 
-  /* Glass button — outline on dark */
+  /* Leather glass button (textile) */
+  .btn-glass-leather {
+    background: rgba(160, 133, 106, 0.80);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 197, 169, 0.50);
+    box-shadow: 0 2px 16px rgba(160, 133, 106, 0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+    color: #fff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-glass-leather:hover {
+    background: rgba(160, 133, 106, 0.95);
+    transform: translateY(-1px);
+  }
+
+  /* Outline on dark */
   .btn-glass-outline {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    color: #FDFCF8;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #F7F2EA;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-glass-outline:hover {
     background: rgba(255, 255, 255, 0.18);
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.45);
     transform: translateY(-1px);
   }
 
-  /* Glass button — outline on light */
+  /* Outline on light */
   .btn-glass-outline-dark {
-    background: rgba(26, 26, 26, 0.06);
+    background: rgba(44, 26, 14, 0.06);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(26, 26, 26, 0.2);
-    color: #1A1A1A;
+    border: 1px solid rgba(44, 26, 14, 0.22);
+    color: #2C1A0E;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-glass-outline-dark:hover {
-    background: rgba(26, 26, 26, 0.88);
-    color: #FDFCF8;
+    background: rgba(44, 26, 14, 0.88);
+    color: #F7F2EA;
     transform: translateY(-1px);
   }
 
-  /* Smooth card hover lift */
+  /* Smooth card hover */
   .card-hover {
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
   }
   .card-hover:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(44,26,14,0.12);
   }
 
-  /* Fade-in-up animation */
+  /* Fade in up */
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-  .animate-fade-in-up {
-    animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
-  }
+  .animate-fade-in-up { animation: fadeInUp 0.7s cubic-bezier(0.4,0,0.2,1) both; }
   .animation-delay-200 { animation-delay: 0.2s; }
   .animation-delay-400 { animation-delay: 0.4s; }
   .animation-delay-600 { animation-delay: 0.6s; }

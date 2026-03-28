@@ -11,7 +11,7 @@ export default function Footer() {
   const navT = useTranslations("nav");
 
   return (
-    <footer className="bg-[#1A1A1A] text-[#FDFCF8] mt-20">
+    <footer className="bg-[#2C1A0E] text-[#F7F2EA] mt-20">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
@@ -21,31 +21,33 @@ export default function Footer() {
                 Barbaria
               </span>
               <br />
-              <span className="text-[10px] tracking-[0.3em] text-[#E299A1] uppercase">
+              <span className="text-[10px] tracking-[0.3em] text-[#C9963A] uppercase">
                 Morocco
               </span>
             </div>
-            <p className="text-sm text-[#FDFCF8]/60 leading-relaxed">
+            <p className="text-sm text-[#F7F2EA]/60 leading-relaxed">
               {t("tagline")}
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h3 className="text-xs tracking-widest uppercase text-[#E299A1] mb-4">
+            <h3 className="text-xs tracking-widest uppercase text-[#C9963A] mb-4">
               {t("links")}
             </h3>
             <ul className="space-y-2">
               {[
                 { href: "/", label: navT("home") },
-                { href: "/products", label: navT("products") },
+                { href: "/cosmetics", label: navT("cosmetics") },
+                { href: "/textile", label: navT("textile") },
+                { href: "/food", label: navT("food") },
                 { href: "/about", label: navT("about") },
                 { href: "/contact", label: navT("contact") },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-[#FDFCF8]/70 hover:text-[#E299A1] transition-colors"
+                    className="text-sm text-[#F7F2EA]/70 hover:text-[#C9963A] transition-colors"
                   >
                     {label}
                   </Link>
@@ -56,7 +58,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="text-xs tracking-widest uppercase text-[#E299A1] mb-4">
+            <h3 className="text-xs tracking-widest uppercase text-[#C9963A] mb-4">
               {t("follow")}
             </h3>
             <div className="flex flex-col gap-3">
@@ -64,7 +66,7 @@ export default function Footer() {
                 href={`https://instagram.com/${INSTAGRAM_HANDLE}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-[#FDFCF8]/70 hover:text-[#E299A1] transition-colors"
+                className="flex items-center gap-2 text-sm text-[#F7F2EA]/70 hover:text-[#C9963A] transition-colors"
               >
                 <FaInstagram size={16} />
                 @{INSTAGRAM_HANDLE}
@@ -73,14 +75,14 @@ export default function Footer() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-[#FDFCF8]/70 hover:text-[#E299A1] transition-colors"
+                className="flex items-center gap-2 text-sm text-[#F7F2EA]/70 hover:text-[#C9963A] transition-colors"
               >
                 <FaWhatsapp size={16} />
                 WhatsApp
               </a>
               <a
                 href="mailto:ta.elbouzidi@gmail.com"
-                className="flex items-center gap-2 text-sm text-[#FDFCF8]/70 hover:text-[#E299A1] transition-colors"
+                className="flex items-center gap-2 text-sm text-[#F7F2EA]/70 hover:text-[#C9963A] transition-colors"
               >
                 <Mail size={16} />
                 ta.elbouzidi@gmail.com
@@ -89,8 +91,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-[#FDFCF8]/10 text-center">
-          <p className="text-xs text-[#FDFCF8]/40 tracking-wide">
+        <div className="mt-12 pt-8 border-t border-[#F7F2EA]/10 text-center">
+          <p className="text-xs text-[#F7F2EA]/40 tracking-wide">
             {t("copyright")}
           </p>
         </div>
