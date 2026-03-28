@@ -5,6 +5,7 @@ import Image from "next/image";
 import { MessageCircle, Check } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { WHATSAPP_NUMBER, INSTAGRAM_HANDLE } from "@/components/Navbar";
+import JsonLd from "@/components/JsonLd";
 
 export async function generateMetadata({
   params,
@@ -173,8 +174,37 @@ function IngredientSpotlight() {
 export default function CosmeticsPage() {
   const t = useTranslations("cosmetics");
 
+  const products = [
+    { name: "Huile d'Argan Pure", price: "45", image: "/brand_photos/argan-oil-dropper.jpg" },
+    { name: "Savon Noir Beldi", price: "28", image: "/brand_photos/savon-noir-3.jpg" },
+    { name: "Sugar Body Scrub", price: "35", image: "/brand_photos/sugar-scrub-ingredients.jpg" },
+  ];
+
   return (
     <div className="pt-16">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Barbaria Morocco Cosmetics",
+          itemListElement: products.map((p, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+              "@type": "Product",
+              name: p.name,
+              image: `https://barbaria-morocco.vercel.app${p.image}`,
+              brand: { "@type": "Brand", name: "Barbaria Morocco" },
+              offers: {
+                "@type": "Offer",
+                priceCurrency: "EUR",
+                price: p.price,
+                availability: "https://schema.org/InStock",
+              },
+            },
+          })),
+        }}
+      />
       {/* Header */}
       <div className="relative py-24 px-6 text-center overflow-hidden">
         <Image

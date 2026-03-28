@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
+import JsonLd from "@/components/JsonLd";
 
 export async function generateMetadata({
   params,
@@ -185,6 +186,19 @@ function BrandStripSection() {
 export default function HomePage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Barbaria Morocco",
+          url: "https://barbaria-morocco.vercel.app",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://barbaria-morocco.vercel.app/fr?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        }}
+      />
       <HeroSection />
       <CategoryCards />
       <BrandStripSection />

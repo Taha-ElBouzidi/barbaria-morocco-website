@@ -59,20 +59,26 @@ export default function ContactPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              <label htmlFor="contact-name" className="sr-only">{t("form.name")}</label>
               <Input
+                id="contact-name"
                 name="name"
                 placeholder={t("form.name")}
                 required
                 className="rounded-full border-[#DDD0BC] bg-white/70 backdrop-blur-sm px-5 h-12 focus-visible:ring-[#C9963A] focus-visible:ring-1 transition-all duration-300"
               />
+              <label htmlFor="contact-email" className="sr-only">{t("form.email")}</label>
               <Input
+                id="contact-email"
                 name="email"
                 type="email"
                 placeholder={t("form.email")}
                 required
                 className="rounded-full border-[#DDD0BC] bg-white/70 backdrop-blur-sm px-5 h-12 focus-visible:ring-[#C9963A] focus-visible:ring-1 transition-all duration-300"
               />
+              <label htmlFor="contact-message" className="sr-only">{t("form.message")}</label>
               <Textarea
+                id="contact-message"
                 name="message"
                 placeholder={t("form.message")}
                 required

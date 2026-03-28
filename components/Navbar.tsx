@@ -72,6 +72,8 @@ export default function Navbar({ locale }: { locale: string }) {
               }`}
               onMouseEnter={() => setCollectionsOpen(true)}
               onMouseLeave={() => setCollectionsOpen(false)}
+              aria-expanded={collectionsOpen}
+              aria-haspopup="true"
             >
               {t("collections")}
               <ChevronDown size={14} className={`transition-transform duration-300 ${collectionsOpen ? "rotate-180" : ""}`} />

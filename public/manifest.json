@@ -1,0 +1,12 @@
+{
+  "name": "Barbaria Morocco",
+  "short_name": "Barbaria",
+  "description": "Cosmetiques naturels, textile artisanal et produits alimentaires du terroir marocain.",
+  "start_url": "/fr",
+  "display": "standalone",
+  "background_color": "#F7F2EA",
+  "theme_color": "#2C1A0E",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "48x48", "type": "image/x-icon" }
+  ]
+}
