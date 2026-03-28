@@ -6,6 +6,7 @@ import { MessageCircle, Check } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { WHATSAPP_NUMBER, INSTAGRAM_HANDLE } from "@/components/Navbar";
 import JsonLd from "@/components/JsonLd";
+import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 
 export async function generateMetadata({
   params,
@@ -60,9 +61,10 @@ function ProductCard({
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t("whatsapp_msg"))}`;
 
   return (
+    <ScrollReveal>
     <article
       id={id}
-      className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-24 border-b border-[#DDD0BC]/60 last:border-0"
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center py-16 sm:py-24 border-b border-[#DDD0BC]/60 last:border-0"
     >
       <div className={`relative ${isReversed ? "md:order-2" : ""}`}>
         <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-lg">
@@ -105,7 +107,7 @@ function ProductCard({
 
         <div className="flex flex-col sm:flex-row gap-3">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-            <button className="btn-glass-pink w-full py-3.5 text-sm tracking-wider uppercase rounded-full flex items-center justify-center gap-2">
+            <button className="btn-glass-pink btn-ripple w-full py-3.5 text-sm tracking-wider uppercase rounded-full flex items-center justify-center gap-2">
               <MessageCircle size={16} />
               {t("order")}
             </button>
@@ -116,7 +118,7 @@ function ProductCard({
             rel="noopener noreferrer"
             className="flex-1"
           >
-            <button className="btn-glass-outline-dark w-full py-3.5 text-sm tracking-wider uppercase rounded-full flex items-center justify-center gap-2">
+            <button className="btn-glass-outline-dark btn-ripple w-full py-3.5 text-sm tracking-wider uppercase rounded-full flex items-center justify-center gap-2">
               <FaInstagram size={16} />
               {t("instagram")}
             </button>
@@ -124,6 +126,7 @@ function ProductCard({
         </div>
       </div>
     </article>
+    </ScrollReveal>
   );
 }
 
@@ -136,15 +139,15 @@ function IngredientSpotlight() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-[#EAD9C0]/30">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#EAD9C0]/30">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl font-bold text-[#2C1A0E] mb-3">{t("title")}</h2>
+        <ScrollReveal className="text-center mb-12 sm:mb-16">
+          <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-[#2C1A0E] mb-3">{t("title")}</h2>
           <p className="text-[#9B8B7A]">{t("subtitle")}</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        </ScrollReveal>
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {ingredients.map(({ key, photo }) => (
-            <div key={key} className="group overflow-hidden rounded-sm card-hover">
+            <StaggerItem key={key} className="group overflow-hidden rounded-sm card-hover">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={photo}
@@ -163,9 +166,9 @@ function IngredientSpotlight() {
                   </div>
                 </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

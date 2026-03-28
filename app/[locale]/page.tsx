@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
+import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
   return {
-    title: "Barbaria Morocco | L'authenticité marocaine",
+    title: "Barbaria Morocco | L'authenticite marocaine",
     description: t("subheadline"),
     openGraph: { images: [{ url: "/brand_photos/products-all-three.jpg" }] },
   };
@@ -69,15 +70,15 @@ function HeroSection() {
         <p className="animate-fade-in-up text-xs tracking-[0.5em] uppercase mb-6 text-[#C9963A]">
           {t("tagline")}
         </p>
-        <h1 className="animate-fade-in-up animation-delay-200 font-playfair text-6xl md:text-8xl font-bold mb-6 leading-tight drop-shadow-lg">
+        <h1 className="animate-fade-in-up animation-delay-200 font-playfair text-5xl sm:text-6xl md:text-8xl font-bold mb-6 leading-tight drop-shadow-lg">
           {t("headline")}
         </h1>
-        <p className="animate-fade-in-up animation-delay-400 text-base md:text-lg text-[#F7F2EA]/80 mb-12 leading-relaxed max-w-xl mx-auto">
+        <p className="animate-fade-in-up animation-delay-400 text-sm sm:text-base md:text-lg text-[#F7F2EA]/80 mb-12 leading-relaxed max-w-xl mx-auto">
           {t("subheadline")}
         </p>
         <div className="animate-fade-in-up animation-delay-600">
           <a href="#collections">
-            <button className="btn-glass-gold px-10 py-3.5 text-sm tracking-[0.2em] uppercase font-medium rounded-full">
+            <button className="btn-glass-gold btn-ripple px-8 sm:px-10 py-3.5 text-sm tracking-[0.2em] uppercase font-medium rounded-full">
               {t("cta")}
             </button>
           </a>
@@ -95,16 +96,16 @@ function CategoryCards() {
   const t = useTranslations("home");
 
   return (
-    <section id="collections" className="py-28 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
+    <section id="collections" className="py-20 sm:py-28 px-4 sm:px-6 max-w-7xl mx-auto">
+      <ScrollReveal className="text-center mb-12 sm:mb-16">
         <p className="text-xs tracking-[0.4em] uppercase text-[#C9963A] mb-4">Barbaria Morocco</p>
-        <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#2C1A0E] mb-4">
+        <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-[#2C1A0E] mb-4">
           Nos Collections
         </h2>
         <div className="w-16 h-px bg-[#C9963A] mx-auto" />
-      </div>
+      </ScrollReveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
         {categories.map(({ key, href, photo, accentGlass, border, btnClass }) => {
           const label = t(`categories.${key}.label`);
           const tagline = t(`categories.${key}.tagline`);
@@ -112,54 +113,55 @@ function CategoryCards() {
           const cta = t(`categories.${key}.cta`);
 
           return (
-            <Link key={key} href={href} className="group block card-hover">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-                <Image
-                  src={photo}
-                  alt={label}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2C1A0E]/80 via-[#2C1A0E]/20 to-transparent" />
+            <StaggerItem key={key}>
+              <Link href={href} className="group block card-hover">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
+                  <Image
+                    src={photo}
+                    alt={label}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C1A0E]/80 via-[#2C1A0E]/20 to-transparent" />
 
-                {/* Content overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div
-                    className="rounded-sm p-5"
-                    style={{
-                      background: accentGlass,
-                      backdropFilter: "blur(16px)",
-                      WebkitBackdropFilter: "blur(16px)",
-                      border: `1px solid ${border}`,
-                    }}
-                  >
-                    <p className="text-xs tracking-[0.3em] uppercase text-[#F7F2EA]/70 mb-1">
-                      {tagline}
-                    </p>
-                    <h3 className="font-playfair text-2xl font-bold text-[#F7F2EA] mb-2">
-                      {label}
-                    </h3>
-                    <p className="text-sm text-[#F7F2EA]/75 leading-relaxed mb-4">{desc}</p>
-                    <button
-                      className={`${btnClass} px-5 py-2 text-xs tracking-widest uppercase rounded-full flex items-center gap-2`}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                    <div
+                      className="rounded-sm p-4 sm:p-5"
+                      style={{
+                        background: accentGlass,
+                        backdropFilter: "blur(16px)",
+                        WebkitBackdropFilter: "blur(16px)",
+                        border: `1px solid ${border}`,
+                      }}
                     >
-                      {cta} <ArrowRight size={13} />
-                    </button>
+                      <p className="text-xs tracking-[0.3em] uppercase text-[#F7F2EA]/70 mb-1">
+                        {tagline}
+                      </p>
+                      <h3 className="font-playfair text-xl sm:text-2xl font-bold text-[#F7F2EA] mb-2">
+                        {label}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-[#F7F2EA]/75 leading-relaxed mb-4">{desc}</p>
+                      <button
+                        className={`${btnClass} btn-ripple px-5 py-2 text-xs tracking-widest uppercase rounded-full flex items-center gap-2`}
+                      >
+                        {cta} <ArrowRight size={13} />
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </StaggerItem>
           );
         })}
-      </div>
+      </StaggerContainer>
     </section>
   );
 }
 
 function BrandStripSection() {
   return (
-    <section className="relative py-28 overflow-hidden">
+    <section className="relative py-20 sm:py-28 overflow-hidden">
       <Image
         src="/brand_photos/brand-lifestyle-4.jpg"
         alt="Barbaria Morocco artisans"
@@ -168,17 +170,17 @@ function BrandStripSection() {
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-[#2C1A0E]/60 backdrop-blur-[2px]" />
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-[#F7F2EA]">
+      <ScrollReveal className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center text-[#F7F2EA]">
         <p className="text-xs tracking-[0.5em] uppercase text-[#C9963A] mb-6">Notre engagement</p>
-        <h2 className="font-playfair text-3xl md:text-5xl font-bold mb-6 leading-tight">
-          "Every bag has a story.<br />Every story changes a life."
+        <h2 className="font-playfair text-2xl sm:text-3xl md:text-5xl font-bold mb-6 leading-tight">
+          &ldquo;Every bag has a story.<br />Every story changes a life.&rdquo;
         </h2>
-        <p className="text-[#F7F2EA]/75 max-w-xl mx-auto leading-relaxed">
-          En collaborant directement avec des artisanes marocaines, nous les aidons à vivre
-          dignement de leur savoir-faire, à soutenir leurs familles et à offrir un avenir meilleur
-          à leurs enfants.
+        <p className="text-sm sm:text-base text-[#F7F2EA]/75 max-w-xl mx-auto leading-relaxed">
+          En collaborant directement avec des artisanes marocaines, nous les aidons a vivre
+          dignement de leur savoir-faire, a soutenir leurs familles et a offrir un avenir meilleur
+          a leurs enfants.
         </p>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

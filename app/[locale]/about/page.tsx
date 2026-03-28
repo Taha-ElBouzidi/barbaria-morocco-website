@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Leaf, Scissors, MapPin } from "lucide-react";
+import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 
 export async function generateMetadata({
   params,
@@ -41,7 +42,7 @@ export default function AboutPage() {
   return (
     <div className="pt-16">
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/brand_photos/gift-box-flat.jpg"
           alt="Barbaria Morocco"
@@ -52,41 +53,45 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-[#2C1A0E]/55" />
         <div className="relative z-10 text-center text-[#F7F2EA] px-6">
-          <p className="text-xs tracking-[0.4em] uppercase text-[#C9963A] mb-4">
+          <p className="animate-fade-in-up text-xs tracking-[0.4em] uppercase text-[#C9963A] mb-4">
             {t("subtitle")}
           </p>
-          <h1 className="font-playfair text-5xl md:text-7xl font-bold">
+          <h1 className="animate-fade-in-up animation-delay-200 font-playfair text-4xl sm:text-5xl md:text-7xl font-bold">
             {t("title")}
           </h1>
         </div>
       </section>
 
       {/* Story */}
-      <section className="max-w-3xl mx-auto px-6 py-24">
-        <div className="space-y-8">
-          <p className="text-lg leading-relaxed text-[#2C1A0E]/80">
-            {t("story_1")}
-          </p>
-          <p className="text-lg leading-relaxed text-[#2C1A0E]/80">
-            {t("story_2")}
-          </p>
-          <p className="text-lg leading-relaxed text-[#2C1A0E]/80">
-            {t("story_3")}
-          </p>
-        </div>
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <ScrollReveal>
+          <div className="space-y-8">
+            <p className="text-base sm:text-lg leading-relaxed text-[#2C1A0E]/80">
+              {t("story_1")}
+            </p>
+            <p className="text-base sm:text-lg leading-relaxed text-[#2C1A0E]/80">
+              {t("story_2")}
+            </p>
+            <p className="text-base sm:text-lg leading-relaxed text-[#2C1A0E]/80">
+              {t("story_3")}
+            </p>
+          </div>
+        </ScrollReveal>
       </section>
 
       {/* Values */}
-      <section className="bg-[#2C1A0E] text-[#F7F2EA] py-24 px-6">
+      <section className="bg-[#2C1A0E] text-[#F7F2EA] py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-playfair text-4xl font-bold text-center mb-16">
-            {t("values_title")}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <ScrollReveal className="text-center mb-12 sm:mb-16">
+            <h2 className="font-playfair text-3xl sm:text-4xl font-bold">
+              {t("values_title")}
+            </h2>
+          </ScrollReveal>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12">
             {(["natural", "artisanal", "moroccan"] as const).map((key) => {
               const Icon = valueIcons[key];
               return (
-                <div key={key} className="text-center">
+                <StaggerItem key={key} className="text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 border border-[#C9963A] rounded-full mb-6">
                     <Icon size={20} className="text-[#C9963A]" />
                   </div>
@@ -96,31 +101,35 @@ export default function AboutPage() {
                   <p className="text-[#F7F2EA]/70 text-sm leading-relaxed">
                     {t(`values.${key}.desc`)}
                   </p>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Photo gallery */}
-      <section className="py-24 px-6 max-w-6xl mx-auto">
-        <h2 className="font-playfair text-4xl font-bold text-center text-[#2C1A0E] mb-16">
-          {t("gallery_title")}
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+        <ScrollReveal className="mb-12 sm:mb-16">
+          <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-center text-[#2C1A0E]">
+            {t("gallery_title")}
+          </h2>
+        </ScrollReveal>
+        <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
           {galleryPhotos.map(({ src, alt }) => (
-            <div key={src} className="relative aspect-square overflow-hidden rounded-sm">
-              <Image
-                src={src}
-                alt={alt}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 50vw, 33vw"
-              />
-            </div>
+            <StaggerItem key={src}>
+              <div className="relative aspect-square overflow-hidden rounded-sm">
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </section>
     </div>
   );

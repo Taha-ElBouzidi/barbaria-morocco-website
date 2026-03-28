@@ -5,6 +5,7 @@ import Image from "next/image";
 import { MessageCircle, Check } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { WHATSAPP_NUMBER, INSTAGRAM_HANDLE } from "@/components/Navbar";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export async function generateMetadata({
   params,
@@ -59,9 +60,10 @@ function ProductCard({
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t("whatsapp_msg"))}`;
 
   return (
+    <ScrollReveal>
     <article
       id={id}
-      className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-24 border-b border-[#DDD0BC]/60 last:border-0"
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center py-16 sm:py-24 border-b border-[#DDD0BC]/60 last:border-0"
     >
       <div className={`relative ${isReversed ? "md:order-2" : ""}`}>
         <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-lg">
@@ -101,7 +103,7 @@ function ProductCard({
 
         <div className="flex flex-col sm:flex-row gap-3">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-            <button className="btn-glass-leather w-full py-3.5 text-sm tracking-wider uppercase rounded-full flex items-center justify-center gap-2">
+            <button className="btn-glass-leather btn-ripple w-full py-3.5 text-sm tracking-wider uppercase rounded-full flex items-center justify-center gap-2">
               <MessageCircle size={16} />
               {t("order")}
             </button>
@@ -112,7 +114,7 @@ function ProductCard({
             rel="noopener noreferrer"
             className="flex-1"
           >
-            <button className="btn-glass-outline-dark w-full py-3.5 text-sm tracking-wider uppercase rounded-full flex items-center justify-center gap-2">
+            <button className="btn-glass-outline-dark btn-ripple w-full py-3.5 text-sm tracking-wider uppercase rounded-full flex items-center justify-center gap-2">
               <FaInstagram size={16} />
               {t("instagram")}
             </button>
@@ -120,6 +122,7 @@ function ProductCard({
         </div>
       </div>
     </article>
+    </ScrollReveal>
   );
 }
 

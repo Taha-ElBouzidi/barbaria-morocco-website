@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/components/Navbar";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export async function generateMetadata({
   params,
