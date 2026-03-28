@@ -186,16 +186,16 @@
     transform: translateY(-1px);
   }
 
-  /* Smooth card hover */
+  /* Smooth card hover with depth */
   .card-hover {
-    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
+    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.5s cubic-bezier(0.4,0,0.2,1);
   }
   .card-hover:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(44,26,14,0.12);
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 24px 48px rgba(44,26,14,0.14), 0 8px 16px rgba(44,26,14,0.08);
   }
 
-  /* Fade in up */
+  /* Fade in up (hero / initial load) */
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -204,4 +204,55 @@
   .animation-delay-200 { animation-delay: 0.2s; }
   .animation-delay-400 { animation-delay: 0.4s; }
   .animation-delay-600 { animation-delay: 0.6s; }
+
+  /* Scroll-triggered reveal (CSS-only via IntersectionObserver-free approach) */
+  @keyframes scrollReveal {
+    from { opacity: 0; transform: translateY(32px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .scroll-reveal {
+    animation: scrollReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+
+  /* Stagger children for kinetic typography effect */
+  .stagger-children > * {
+    animation: scrollReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+  .stagger-children > *:nth-child(2) { animation-delay: 50ms; }
+  .stagger-children > *:nth-child(3) { animation-delay: 100ms; }
+  .stagger-children > *:nth-child(4) { animation-delay: 150ms; }
+  .stagger-children > *:nth-child(5) { animation-delay: 200ms; }
+
+  /* Ripple effect on buttons */
+  .btn-ripple {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-ripple::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--ripple-x, 50%) var(--ripple-y, 50%), rgba(255,255,255,0.3) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .btn-ripple:active::after {
+    opacity: 1;
+    transition: opacity 0s;
+  }
+
+  /* Image shimmer loading placeholder */
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .img-shimmer {
+    background: linear-gradient(90deg, #EDE4D0 25%, #F7F2EA 50%, #EDE4D0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
 }

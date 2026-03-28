@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Barbaria Morocco — L'authenticité marocaine",
+    default: "Barbaria Morocco | L'authenticité marocaine",
     template: "%s | Barbaria Morocco",
   },
   description:

@@ -13,7 +13,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
   return {
-    title: "Barbaria Morocco — L'authenticité marocaine",
+    title: "Barbaria Morocco | L'authenticité marocaine",
     description: t("subheadline"),
     openGraph: { images: [{ url: "/brand_photos/products-all-three.jpg" }] },
   };

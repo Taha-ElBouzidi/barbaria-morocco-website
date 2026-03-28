@@ -11,13 +11,13 @@
   "home": {
     "tagline": "L'authenticité marocaine. La rareté d'une création.",
     "headline": "Barbaria Morocco",
-    "subheadline": "Trois univers. Un seul héritage — le Maroc artisanal, naturel et vivant.",
+    "subheadline": "Trois univers. Un seul héritage  - le Maroc artisanal, naturel et vivant.",
     "cta": "Découvrir nos collections",
     "categories": {
       "cosmetics": {
         "label": "Cosmétiques",
         "tagline": "Soins naturels",
-        "desc": "Huile d'Argan, Savon Noir, Sugar Body Scrub — formulés par des artisanes berbères.",
+        "desc": "Huile d'Argan, Savon Noir, Sugar Body Scrub  - formulés par des artisanes berbères.",
         "cta": "Découvrir"
       },
       "textile": {
@@ -29,7 +29,7 @@
       "food": {
         "label": "Alimentaire",
         "tagline": "Bientôt disponible",
-        "desc": "Épices, coffrets cadeaux et saveurs du Maroc — une nouvelle collection à venir.",
+        "desc": "Épices, coffrets cadeaux et saveurs du Maroc  - une nouvelle collection à venir.",
         "cta": "Être notifié"
       }
     }
@@ -77,7 +77,7 @@
       "saad": {
         "name": "Huile de Saad",
         "tagline": "Le laser naturel",
-        "description": "Extraite du Cyperus Esculentus — Souchet odorant marocain — pressé à froid. Stimule la microcirculation du cuir chevelu, réactive les follicules pileux endormis et agit sur les zones de calvitie. Résultats visibles en 4 à 8 semaines.",
+        "description": "Extraite du Cyperus Esculentus  - Souchet odorant marocain  - pressé à froid. Stimule la microcirculation du cuir chevelu, réactive les follicules pileux endormis et agit sur les zones de calvitie. Résultats visibles en 4 à 8 semaines.",
         "ingredients": ["Cyperus Esculentus (Saad) pur 100%"],
         "volume": "30ml",
         "price": "Sur demande",
@@ -104,7 +104,7 @@
       "sac_femme": {
         "name": "Sac à Main Femme",
         "tagline": "L'élégance d'une histoire",
-        "description": "Sac à main entièrement fait main à partir de tapis marocains authentiques. Anses en cuir véritable. Chaque pièce est unique — aucun sac ne ressemble à un autre.",
+        "description": "Sac à main entièrement fait main à partir de tapis marocains authentiques. Anses en cuir véritable. Chaque pièce est unique  - aucun sac ne ressemble à un autre.",
         "details": ["Tissu tapis marocain authentique", "Anses cuir véritable", "Pièce unique", "Fait main au Maroc"],
         "whatsapp_msg": "Bonjour, je souhaite commander un Sac à Main Femme Barbaria Morocco.",
         "order": "Commander sur WhatsApp",
@@ -113,7 +113,7 @@
       "sac_homme": {
         "name": "Sac Bandoulière Homme",
         "tagline": "Avec Pins exclusifs",
-        "description": "Sac bandoulière pour homme en tissu berbère avec cuir camel. Livré avec des pins exclusifs Barbaria — motifs de tapis marocains en émail doré. Authenticité et luxe.",
+        "description": "Sac bandoulière pour homme en tissu berbère avec cuir camel. Livré avec des pins exclusifs Barbaria  - motifs de tapis marocains en émail doré. Authenticité et luxe.",
         "details": ["Tissu berbère et cuir camel", "Pins émail doré inclus", "Fermeture à glissière", "Fait main au Maroc"],
         "whatsapp_msg": "Bonjour, je souhaite commander un Sac Bandoulière Homme Barbaria Morocco.",
         "order": "Commander sur WhatsApp",
@@ -131,8 +131,8 @@
       "pins": {
         "name": "Pins par Collection",
         "tagline": "L'art du Maroc en miniature",
-        "description": "Collections de pins rendant hommage au patrimoine de chaque ville marocaine. Fès, Marrakech, Casablanca, Sahara, Essaouira, Nord/Chamal — chaque ville a ses symboles.",
-        "collections": ["Collection Fès — Chapeau Fassi, Babouche, Takchita", "Collection Marrakech — Tanjia, Koutoubia, Palmier", "Collection Nord/Chamal — Cap Spartel, Chefchaouen, Barque", "Collection Casablanca — Hassan II, Tramway, Corniche", "Collection Sahara — Dromadaire, Bivouac, Touareg", "Collection Essaouira — Mouette, Forteresse, Gnawa"],
+        "description": "Collections de pins rendant hommage au patrimoine de chaque ville marocaine. Fès, Marrakech, Casablanca, Sahara, Essaouira, Nord/Chamal  - chaque ville a ses symboles.",
+        "collections": ["Collection Fès  - Chapeau Fassi, Babouche, Takchita", "Collection Marrakech  - Tanjia, Koutoubia, Palmier", "Collection Nord/Chamal  - Cap Spartel, Chefchaouen, Barque", "Collection Casablanca  - Hassan II, Tramway, Corniche", "Collection Sahara  - Dromadaire, Bivouac, Touareg", "Collection Essaouira  - Mouette, Forteresse, Gnawa"],
         "whatsapp_msg": "Bonjour, je souhaite commander des Pins Barbaria Morocco.",
         "order": "Commander sur WhatsApp",
         "instagram": "Voir sur Instagram"
@@ -151,13 +151,13 @@
     "title": "Notre Histoire",
     "subtitle": "Barbaria Morocco",
     "story_1": "Née au cœur du Maroc, Barbaria Morocco est une marque fondée sur une conviction profonde : les meilleures créations sont celles que la nature et les mains humaines ont façonnées ensemble.",
-    "story_2": "Nous travaillons directement avec des coopératives berbères et des artisans locaux — des femmes tisserandes, des maîtres du savon, des presseurs d'huile — pour créer des produits qui portent une histoire vraie.",
+    "story_2": "Nous travaillons directement avec des coopératives berbères et des artisans locaux  - des femmes tisserandes, des maîtres du savon, des presseurs d'huile  - pour créer des produits qui portent une histoire vraie.",
     "story_3": "Porter ou utiliser un produit Barbaria, c'est adopter un morceau d'histoire marocaine et soutenir un impact social concret sur les familles artisanes.",
     "values_title": "Nos Valeurs",
     "values": {
       "natural": { "title": "Naturel", "desc": "Ingrédients 100% d'origine naturelle, sans parabènes ni sulfates." },
       "artisanal": { "title": "Artisanal", "desc": "Fabriqué à la main par des artisans marocains selon des recettes et techniques ancestrales." },
-      "moroccan": { "title": "Marocain", "desc": "Ancré dans le patrimoine du Maroc — du Sahara à l'Atlas, de Fès à Essaouira." }
+      "moroccan": { "title": "Marocain", "desc": "Ancré dans le patrimoine du Maroc  - du Sahara à l'Atlas, de Fès à Essaouira." }
     },
     "gallery_title": "En Images"
   },

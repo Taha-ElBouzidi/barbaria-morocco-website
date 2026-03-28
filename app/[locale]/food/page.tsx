@@ -13,7 +13,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "food" });
   return {
-    title: `Alimentaire — ${t("subtitle")} | Barbaria Morocco`,
+    title: `Alimentaire | ${t("subtitle")} | Barbaria Morocco`,
     description: t("desc"),
   };
 }

@@ -11,13 +11,13 @@
   "home": {
     "tagline": "Moroccan authenticity. The rarity of a creation.",
     "headline": "Barbaria Morocco",
-    "subheadline": "Three worlds. One heritage — artisanal, natural, living Morocco.",
+    "subheadline": "Three worlds. One heritage  - artisanal, natural, living Morocco.",
     "cta": "Discover our collections",
     "categories": {
       "cosmetics": {
         "label": "Cosmetics",
         "tagline": "Natural skincare",
-        "desc": "Argan Oil, Black Soap, Sugar Body Scrub — formulated by Berber craftswomen.",
+        "desc": "Argan Oil, Black Soap, Sugar Body Scrub  - formulated by Berber craftswomen.",
         "cta": "Discover"
       },
       "textile": {
@@ -29,7 +29,7 @@
       "food": {
         "label": "Food",
         "tagline": "Coming soon",
-        "desc": "Spices, gift boxes and flavors of Morocco — a new collection coming soon.",
+        "desc": "Spices, gift boxes and flavors of Morocco  - a new collection coming soon.",
         "cta": "Get notified"
       }
     }
@@ -77,7 +77,7 @@
       "saad": {
         "name": "Saad Oil",
         "tagline": "The natural laser",
-        "description": "Extracted from Cyperus Esculentus — Moroccan Saad — cold-pressed. Stimulates scalp microcirculation, reactivates dormant hair follicles, and targets thinning areas. Visible results in 4 to 8 weeks.",
+        "description": "Extracted from Cyperus Esculentus  - Moroccan Saad  - cold-pressed. Stimulates scalp microcirculation, reactivates dormant hair follicles, and targets thinning areas. Visible results in 4 to 8 weeks.",
         "ingredients": ["100% pure Cyperus Esculentus (Saad)"],
         "volume": "30ml",
         "price": "On request",
@@ -104,7 +104,7 @@
       "sac_femme": {
         "name": "Women's Handbag",
         "tagline": "The elegance of a story",
-        "description": "Entirely handmade from authentic Moroccan carpet fabric. Genuine leather handles. Each piece is unique — no two bags are alike.",
+        "description": "Entirely handmade from authentic Moroccan carpet fabric. Genuine leather handles. Each piece is unique  - no two bags are alike.",
         "details": ["Authentic Moroccan carpet fabric", "Genuine leather handles", "One-of-a-kind piece", "Handmade in Morocco"],
         "whatsapp_msg": "Hello, I would like to order a Barbaria Morocco Women's Handbag.",
         "order": "Order on WhatsApp",
@@ -113,7 +113,7 @@
       "sac_homme": {
         "name": "Men's Shoulder Bag",
         "tagline": "With exclusive Pins",
-        "description": "Men's shoulder bag in Berber fabric with camel leather. Comes with exclusive Barbaria pins — gold enamel Moroccan carpet motifs. Authenticity and luxury.",
+        "description": "Men's shoulder bag in Berber fabric with camel leather. Comes with exclusive Barbaria pins  - gold enamel Moroccan carpet motifs. Authenticity and luxury.",
         "details": ["Berber fabric and camel leather", "Gold enamel pins included", "Zip closure", "Handmade in Morocco"],
         "whatsapp_msg": "Hello, I would like to order a Barbaria Morocco Men's Shoulder Bag.",
         "order": "Order on WhatsApp",
@@ -131,8 +131,8 @@
       "pins": {
         "name": "Pins by Collection",
         "tagline": "Moroccan art in miniature",
-        "description": "Pin collections paying tribute to the heritage of each Moroccan city. Fès, Marrakech, Casablanca, Sahara, Essaouira, North/Chamal — each city has its symbols.",
-        "collections": ["Fès Collection — Fassi Hat, Babouche, Takchita", "Marrakech Collection — Tanjia, Koutoubia, Palm Tree", "North/Chamal — Cap Spartel, Chefchaouen, Fishing Boat", "Casablanca — Hassan II Mosque, Tramway, Corniche", "Sahara — Dromedary, Bivouac, Touareg", "Essaouira — Seagull, Fortress, Gnawa"],
+        "description": "Pin collections paying tribute to the heritage of each Moroccan city. Fès, Marrakech, Casablanca, Sahara, Essaouira, North/Chamal  - each city has its symbols.",
+        "collections": ["Fès Collection  - Fassi Hat, Babouche, Takchita", "Marrakech Collection  - Tanjia, Koutoubia, Palm Tree", "North/Chamal  - Cap Spartel, Chefchaouen, Fishing Boat", "Casablanca  - Hassan II Mosque, Tramway, Corniche", "Sahara  - Dromedary, Bivouac, Touareg", "Essaouira  - Seagull, Fortress, Gnawa"],
         "whatsapp_msg": "Hello, I would like to order Barbaria Morocco Pins.",
         "order": "Order on WhatsApp",
         "instagram": "View on Instagram"
@@ -151,13 +151,13 @@
     "title": "Our Story",
     "subtitle": "Barbaria Morocco",
     "story_1": "Born in the heart of Morocco, Barbaria Morocco is a brand built on a deep conviction: the finest creations are those shaped together by nature and human hands.",
-    "story_2": "We work directly with Berber cooperatives and local artisans — women weavers, soap masters, oil pressers — to create products that carry a true story.",
+    "story_2": "We work directly with Berber cooperatives and local artisans  - women weavers, soap masters, oil pressers  - to create products that carry a true story.",
     "story_3": "Using or wearing a Barbaria product means adopting a piece of Moroccan history and supporting a real social impact on artisan families.",
     "values_title": "Our Values",
     "values": {
       "natural": { "title": "Natural", "desc": "100% natural origin ingredients, free from parabens and sulfates." },
       "artisanal": { "title": "Artisanal", "desc": "Handmade by Moroccan artisans using ancestral recipes and techniques." },
-      "moroccan": { "title": "Moroccan", "desc": "Rooted in Morocco's heritage — from the Sahara to the Atlas, from Fès to Essaouira." }
+      "moroccan": { "title": "Moroccan", "desc": "Rooted in Morocco's heritage  - from the Sahara to the Atlas, from Fès to Essaouira." }
     },
     "gallery_title": "In Photos"
   },
