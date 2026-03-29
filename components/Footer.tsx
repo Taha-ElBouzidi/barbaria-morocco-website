@@ -81,11 +81,11 @@ export default function Footer() {
                 WhatsApp
               </a>
               <a
-                href="mailto:ta.elbouzidi@gmail.com"
+                href="mailto:Contact@barbariamorocco.com"
                 className="flex items-center gap-2 text-sm text-[#F7F2EA]/70 hover:text-[#C9963A] transition-colors"
               >
                 <Mail size={16} />
-                ta.elbouzidi@gmail.com
+                Contact@barbariamorocco.com
               </a>
             </div>
           </div>

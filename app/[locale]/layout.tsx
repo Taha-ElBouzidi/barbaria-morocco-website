@@ -121,6 +121,7 @@ export default async function LocaleLayout({
                 contactType: "customer service",
                 availableLanguage: ["French", "English"],
               },
+              email: CONTACT_EMAIL,
               sameAs: [
                 "https://instagram.com/barbaria_00",
               ],

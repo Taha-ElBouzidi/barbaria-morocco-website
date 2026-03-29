@@ -6,7 +6,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
-const WHATSAPP_NUMBER = "TODO_WHATSAPP"; // TODO: add WhatsApp number
+const WHATSAPP_NUMBER = "212659658863";
 const INSTAGRAM_HANDLE = "barbaria_00";
 
 export default function Navbar({ locale }: { locale: string }) {
