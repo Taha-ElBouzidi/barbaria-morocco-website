@@ -112,7 +112,7 @@ export default async function LocaleLayout({
               "@type": "Organization",
               name: "Barbaria Morocco",
               url: BASE_URL,
-              logo: `${BASE_URL}/brand_photos/barbaria-logo.jpg`,
+              logo: `${BASE_URL}/brand_photos/barbaria-logo-new.jpg`,
               description:
                 "Cosmetiques naturels, textile artisanal et produits alimentaires du terroir marocain.",
               contactPoint: {

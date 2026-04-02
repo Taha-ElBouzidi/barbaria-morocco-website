@@ -41,7 +41,7 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* Logo — left */}
         <Link href="/" className="flex items-center gap-3 flex-shrink-0">
           <Image
-            src="/brand_photos/barbaria-logo.jpg"
+            src="/brand_photos/barbaria-logo-new.jpg"
             alt="Barbaria Morocco"
             width={36}
             height={36}
