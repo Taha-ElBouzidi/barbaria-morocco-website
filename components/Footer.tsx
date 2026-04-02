@@ -41,6 +41,7 @@ export default function Footer() {
                 { href: "/cosmetics", label: navT("cosmetics") },
                 { href: "/textile", label: navT("textile") },
                 { href: "/food", label: navT("food") },
+                { href: "/order", label: navT("order") },
                 { href: "/about", label: navT("about") },
                 { href: "/contact", label: navT("contact") },
               ].map(({ href, label }) => (

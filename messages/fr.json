@@ -6,7 +6,8 @@
     "food": "Alimentaire",
     "about": "À Propos",
     "contact": "Contact",
-    "collections": "Collections"
+    "collections": "Collections",
+    "order": "Commander"
   },
   "home": {
     "tagline": "L'authenticité marocaine. La rareté d'une création.",
@@ -41,49 +42,247 @@
     "featured_title": "Nos Soins",
     "view": "Voir le produit",
     "products": {
-      "argan": {
+      "huile-argan": {
         "name": "Huile d'Argan Pure",
         "tagline": "L'or liquide du Maroc",
-        "description": "Extraite par pression à froid de noix d'arganier soigneusement sélectionnées dans les coopératives berbères de l'Atlas. Idéale pour nourrir la peau, sublimer les cheveux et renforcer les ongles. Non grasse, vite absorbée.",
-        "ingredients": ["Argan pur (Argania Spinosa)"],
-        "volume": "30ml",
-        "price": "45€",
-        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile d'Argan Pure Barbaria Morocco.",
-        "order": "Commander sur WhatsApp",
-        "instagram": "Voir sur Instagram"
+        "description": "La plus grande huile marocaine, extraite à froid par première pression mécanique, sans solvant. Dorée, légère, non grasse. Riche en vitamine E et oméga 6-9.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile d'Argan Pure Barbaria Morocco."
       },
-      "savon": {
-        "name": "Savon Noir Beldi",
-        "tagline": "Le rituel hammam authentique",
-        "description": "Le Savon Noir traditionnel marocain, enrichi à la Fleur d'oranger et à la Nila. Exfoliant naturel, il purifie en profondeur, illumine le teint et prépare la peau au soin. 100% naturel, sans additifs.",
-        "ingredients": ["Olive saponifiée", "Fleur d'oranger", "Nila"],
-        "volume": "200ml",
-        "price": "28€",
-        "whatsapp_msg": "Bonjour, je souhaite commander le Savon Noir Beldi Barbaria Morocco.",
-        "order": "Commander sur WhatsApp",
-        "instagram": "Voir sur Instagram"
+      "huile-figue": {
+        "name": "Huile de Figue de Barbarie",
+        "tagline": "Ultra rare - 1 tonne pour 1 litre",
+        "description": "L'huile la plus riche en vitamine E du monde végétal. 1 tonne de figues pour 1 litre d'huile - extraction mécanique à froid. Régénération cellulaire profonde, anti-rides intense.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile de Figue de Barbarie Barbaria Morocco."
       },
-      "scrub": {
-        "name": "Sugar Body Scrub",
-        "tagline": "Gommage corps douceur",
-        "description": "Notre gommage corps au sucre allie l'action exfoliante douce du sucre aux bienfaits nourrissants de l'Argan, à la douceur florale de la Fleur d'oranger et à la pureté de la Nila. Peau lisse, douce et lumineuse.",
-        "ingredients": ["Sucre", "Huile d'Argan", "Fleur d'oranger", "Nila"],
-        "volume": "300ml",
-        "price": "35€",
-        "whatsapp_msg": "Bonjour, je souhaite commander le Sugar Body Scrub Barbaria Morocco.",
-        "order": "Commander sur WhatsApp",
-        "instagram": "Voir sur Instagram"
+      "huile-saad": {
+        "name": "Huile de S'ad (Souchet)",
+        "tagline": "Tradition ancestrale féminine",
+        "description": "Huile de souchet odorant au parfum naturel terreux et doux unique. Utilisée par les femmes marocaines comme parfum corps et soin capillaire depuis des siècles. Douce pour peaux sensibles.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile de S'ad Barbaria Morocco."
       },
-      "saad": {
-        "name": "Huile de Saad",
-        "tagline": "Le laser naturel",
-        "description": "Extraite du Cyperus Esculentus  - Souchet odorant marocain  - pressé à froid. Stimule la microcirculation du cuir chevelu, réactive les follicules pileux endormis et agit sur les zones de calvitie. Résultats visibles en 4 à 8 semaines.",
-        "ingredients": ["Cyperus Esculentus (Saad) pur 100%"],
-        "volume": "30ml",
-        "price": "Sur demande",
-        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile de Saad Barbaria Morocco.",
-        "order": "Commander sur WhatsApp",
-        "instagram": "Voir sur Instagram"
+      "huile-ricin": {
+        "name": "Huile de Ricin Pure",
+        "tagline": "Multi-usage, pressée à froid",
+        "description": "Pressée à froid, épaisse et nourrissante. Stimule la pousse des cheveux, renforce sourcils et cils, hydrate intensément les zones sèches. 100% pure sans additif ni conservateur.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile de Ricin Pure Barbaria Morocco."
+      },
+      "huile-rose": {
+        "name": "Huile de Rose Pure",
+        "tagline": "Luxe - Vallée du Dadès",
+        "description": "Huile essentielle de Rosa Damascena de la vallée du Dadès. Quelques gouttes suffisent. L'une des plus chères au monde, anti-rides puissante, régénérante, au parfum floral exceptionnel.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile de Rose Pure Barbaria Morocco."
+      },
+      "huile-nigelle": {
+        "name": "Huile de Nigelle Pure",
+        "tagline": "La graine bénie - Habba Sawda",
+        "description": "Pressée à froid, anti-inflammatoire naturelle puissante. Très forte demande dans le monde arabe pour ses vertus. Anti-chute, purifie le cuir chevelu, soin peau problématique.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile de Nigelle Pure Barbaria Morocco."
+      },
+      "serum-anti-age": {
+        "name": "Sérum Anti-Age Royal",
+        "tagline": "Le trio le plus puissant du Maroc",
+        "description": "Figue de Barbarie régénère les cellules, Argan nourrit en profondeur, Rose illumine et repulpe. Anti-rides intense, résultat visible en 4 semaines. Le best-seller de la gamme.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Sérum Anti-Age Royal Barbaria Morocco."
+      },
+      "serum-eclat": {
+        "name": "Sérum Eclat & Teint Unifié",
+        "tagline": "Effet doré naturel sur la peau",
+        "description": "Argan + Figue de Barbarie + S'ad. L'huile de S'ad apporte une note dorée naturelle à la peau. Illumine le teint, unifie la carnation, réduit les taches.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Sérum Eclat & Teint Barbaria Morocco."
+      },
+      "serum-cheveux": {
+        "name": "Sérum Cheveux Fortifiant",
+        "tagline": "Anti-chute, formule complète",
+        "description": "Ricin (pousse et épaisseur) + Nigelle (anti-chute, cuir chevelu) + Argan (brillance). La formule capillaire naturelle la plus complète. Stimule la pousse, nourrit le cuir chevelu.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Sérum Cheveux Fortifiant Barbaria Morocco."
+      },
+      "serum-sourcils": {
+        "name": "Sérum Sourcils & Cils",
+        "tagline": "Pousse et densité en 3 semaines",
+        "description": "Ricin pur densifiant + Figue de Barbarie régénérante + Rose apaisante. Formule sérum pour zone délicate. Densifie sourcils et cils, stimule la pousse sans irriter.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Sérum Sourcils & Cils Barbaria Morocco."
+      },
+      "serum-contour-yeux": {
+        "name": "Sérum Contour Yeux",
+        "tagline": "Le plus doux pour la zone la plus délicate",
+        "description": "Figue de Barbarie ultra-concentrée + S'ad décongestionnant + Rose tonifiante. Anti-rides contour yeux, réduit les cernes, repulpe la peau fine du regard.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Sérum Contour Yeux Barbaria Morocco."
+      },
+      "serum-corps": {
+        "name": "Sérum Corps Anti-Vergetures",
+        "tagline": "Prévention et atténuation naturelle",
+        "description": "Argan réparateur + Ricin tenseur + Nigelle régénérante. Prévient et atténue les vergetures, raffermit la peau, améliore l'élasticité. Usage sur le long terme.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Sérum Corps Anti-Vergetures Barbaria Morocco."
+      },
+      "gommage-nila": {
+        "name": "Gommage Nila, Argan & Fleur d'Oranger",
+        "tagline": "Le gommage signature Barbaria",
+        "description": "Le gommage signature de Barbaria Morocco. Nila (indigo pur) + Argan + Eau de fleur d'oranger. Couleur bleu-noire naturelle magnifique. Purifie en profondeur, détoxifie, laisse peau neuve.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Gommage Nila Barbaria Morocco."
+      },
+      "gommage-aker-fassi": {
+        "name": "Gommage Aker Fassi & Rose",
+        "tagline": "Eclat et luminosité naturelle",
+        "description": "Aker fassi (écorce de grenadier de Fès) + Eau de rose du Dadès + Sucre de canne. Exfolie, illumine, repulpe. Couleur rose naturelle magnifique. Très apprécié en spa.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Gommage Aker Fassi & Rose Barbaria Morocco."
+      },
+      "masque-ghassoul-rose": {
+        "name": "Masque Ghassoul & Eau de Rose",
+        "tagline": "La purification ancestrale",
+        "description": "Ghassoul (argile volcanique du Moyen Atlas, unique au Maroc) + Eau de rose pure. Absorbe les impuretés et excès de sébum, resserre les pores. Peau veloutée et douce.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Masque Ghassoul & Rose Barbaria Morocco."
+      },
+      "gommage-sidr": {
+        "name": "Gommage Sidr & Argan",
+        "tagline": "Le nettoyant sacré ancestral",
+        "description": "Poudre de feuilles de Sidr (jujubier sacré) + Huile d'Argan + Miel naturel. Utilisé depuis des siècles comme nettoyant sacré dans la tradition marocaine. Nettoie, fortifie, adoucit.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Gommage Sidr & Argan Barbaria Morocco."
+      },
+      "gommage-levres": {
+        "name": "Gommage Lèvres Aker Fassi & Miel",
+        "tagline": "Soin lèvres traditionnel marocain",
+        "description": "Aker fassi + Miel naturel + Sucre fin. Le soin lèvres le plus traditionnel des femmes marocaines. Exfolie et colore naturellement les lèvres en rose. Sans maquillage.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Gommage Lèvres Aker Fassi Barbaria Morocco."
+      },
+      "masque-corps": {
+        "name": "Masque Corps Ghassoul & Argan",
+        "tagline": "Soin corps complet après hammam",
+        "description": "Ghassoul + Argan + Fleur d'oranger. Masque corps complet après gommage. Scelle les bienfaits du hammam. Peau ultra-douce. Idéal en protocole spa.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Masque Corps Ghassoul & Argan Barbaria Morocco."
+      },
+      "eau-rose": {
+        "name": "Eau de Rose Pure du Dadès",
+        "tagline": "Le classique marocain universel",
+        "description": "Rosa Damascena distillée à la vapeur dans la vallée du Dadès. Le produit le plus utilisé dans les foyers marocains. Tonifie, resserre les pores, illumine. Usage cosmetique et culinaire.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Eau de Rose du Dadès Barbaria Morocco."
+      },
+      "eau-fleur-oranger": {
+        "name": "Eau de Fleur d'Oranger Pure",
+        "tagline": "Tradition de Fès et Meknès",
+        "description": "Citrus Aurantium distillé à Fès et Meknès. La plus utilisée des eaux florales au Maroc. Apaisante et anti-stress, éclat du teint. Usage cosmétique, culinaire et aromatique.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Eau de Fleur d'Oranger Barbaria Morocco."
+      },
+      "hydrolat-romarin": {
+        "name": "Hydrolat de Romarin",
+        "tagline": "Tendance capillaire 2026",
+        "description": "Rosmarinus Officinalis des montagnes marocaines. Tendance mondiale capillaire 2026. Très demandé en Europe pour la pousse des cheveux. Stimule la circulation, réduit la chute.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Hydrolat de Romarin Barbaria Morocco."
+      },
+      "hydrolat-lavande": {
+        "name": "Hydrolat de Lavande Atlas",
+        "tagline": "Apaisant et cicatrisant naturel",
+        "description": "Lavande de l'Atlas marocain distillée artisanalement. Qualité supérieure à la lavande ordinaire. Apaisante, cicatrisante, anti-acné. Convient aux peaux sensibles.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Hydrolat de Lavande Atlas Barbaria Morocco."
+      },
+      "hydrolat-neroli": {
+        "name": "Hydrolat de Néroli",
+        "tagline": "Luxe anti-âge pour peaux matures",
+        "description": "Eau de fleur d'oranger amère, plus concentrée et luxueuse. Anti-rides puissant, régénération cellulaire. Tonique luxe au parfum floral profond et envoûtant.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Hydrolat de Néroli Barbaria Morocco."
+      },
+      "brume-rose-oranger": {
+        "name": "Brume Tonique Rose & Fleur d'Oranger",
+        "tagline": "Le duo emblématique du Maroc",
+        "description": "Les deux hydrolats emblématiques du Maroc réunis : Rose du Dadès + Fleur d'oranger de Fès. Double action tonique et apaisante. Parfum floral marocain unique. Cadeau idéal.",
+        "whatsapp_msg": "Bonjour, je souhaite commander la Brume Tonique Rose & Oranger Barbaria Morocco."
+      },
+      "savon-nila-oranger": {
+        "name": "Savon Beldi Nila & Fleur d'Oranger",
+        "tagline": "Le savon signature hammam",
+        "description": "Base beldi (olive noire fermentée) + Nila (indigo pur) + Fleur d'oranger. Couleur naturelle bleutée magnifique. Purification intense, détoxifiant naturel. Le savon signature de la gamme.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Savon Beldi Nila & Oranger Barbaria Morocco."
+      },
+      "savon-aker-rose": {
+        "name": "Savon Beldi Aker Fassi & Rose",
+        "tagline": "Eclat et teint unifié",
+        "description": "Base beldi + Aker fassi (pigment naturel de grenadier) + Eau de rose du Dadès. Exfoliant et illuminateur. Couleur rose naturelle sublime. Laisse la peau rosée et lumineuse.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Savon Beldi Aker Fassi & Rose Barbaria Morocco."
+      },
+      "savon-saad-musc": {
+        "name": "Savon Beldi S'ad & Musc Blanc",
+        "tagline": "Le plus luxueux - Golfe & Pays arabes",
+        "description": "Base beldi + Huile de S'ad + Musc blanc naturel. Parfum chaud, boisé, enveloppant, sans alcool. Purifie et parfume durablement. Le savon le plus luxueux de la gamme.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Savon Beldi S'ad & Musc Barbaria Morocco."
+      },
+      "savon-ghassoul-argan": {
+        "name": "Savon Beldi Ghassoul & Argan",
+        "tagline": "Triple action - complet et nourrissant",
+        "description": "Triple action : base beldi nettoie, ghassoul purifie et absorbe, Argan nourrit. Le savon le plus complet du hammam marocain. Idéal pour peaux sèches et mixtes.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Savon Beldi Ghassoul & Argan Barbaria Morocco."
+      },
+      "savon-sidr-nigelle": {
+        "name": "Savon Beldi Sidr & Nigelle",
+        "tagline": "Soin capillaire spécial hammam",
+        "description": "Formule spécialement conçue pour le lavage des cheveux au hammam. Sidr (jujubier sacré) + Nigelle + base beldi. Alternative naturelle au shampooing. Fortifiant, anti-pelliculaire.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Savon Beldi Sidr & Nigelle Barbaria Morocco."
+      },
+      "savon-henne-jasmin": {
+        "name": "Savon Beldi Henné & Jasmin",
+        "tagline": "Parfum floral intense et naturel",
+        "description": "Base beldi + Henné naturel pur (fortifiant) + Jasmin du Maroc (parfumant). Couleur naturelle orangée douce. Renforce cheveux et peau, parfume au jasmin frais.",
+        "whatsapp_msg": "Bonjour, je souhaite commander le Savon Beldi Henné & Jasmin Barbaria Morocco."
+      },
+      "massage-argan-oud": {
+        "name": "Huile Massage Argan & Oud",
+        "tagline": "Premium - Tradition du Golfe",
+        "description": "Argan + extrait naturel d'Oud. L'Oud est une tradition culturelle profonde dans les pays du Golfe. Parfum boisé, chaud, luxueux. Nourrit profondément, parfume durablement.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile Massage Argan & Oud Barbaria Morocco."
+      },
+      "massage-argan-rose": {
+        "name": "Huile Massage Argan & Rose",
+        "tagline": "Le favori des spas de luxe",
+        "description": "Argan + Huile essentielle de rose du Dadès. Le classique luxueux des soins spa. Parfum floral naturel exceptionnel. Nourrit et régénère, peau douce comme de la soie.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile Massage Argan & Rose Barbaria Morocco."
+      },
+      "massage-figue-saad": {
+        "name": "Huile Corps Figue & S'ad",
+        "tagline": "Le soin et le parfum en un geste",
+        "description": "Figue de Barbarie ultra-nourrissante + Huile de S'ad au parfum naturel unique terreux-doux. Peau ultra-soyeuse, pénétration rapide sans film gras. Geste féminin ancestral.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile Corps Figue & S'ad Barbaria Morocco."
+      },
+      "massage-argan-jasmin": {
+        "name": "Huile Massage Argan & Jasmin",
+        "tagline": "Relaxant et envoûtant",
+        "description": "Argan + Jasmin du Maroc. Parfum floral envoûtant, décontractant naturel. Pour massage relaxant corps complet. Idéal le soir avant coucher, stress et tension musculaire.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile Massage Argan & Jasmin Barbaria Morocco."
+      },
+      "massage-argan-musc": {
+        "name": "Huile Corps Argan & Musc Blanc",
+        "tagline": "Musc naturel sans alcool",
+        "description": "Argan + Musc blanc naturel. Parfum doux, chaud, enveloppant, sans alcool - respecte toutes les valeurs culturelles. Très forte demande Golfe et Maroc. Parfume toute la journée.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile Corps Argan & Musc Barbaria Morocco."
+      },
+      "massage-argan-cannelle": {
+        "name": "Huile Chauffante Argan & Cannelle",
+        "tagline": "Effet chauffant, drainant naturel",
+        "description": "Argan + Cannelle naturelle du Maroc. Effet chauffant naturel, stimule la circulation. Idéal massage musculaire et drainage. Parfum épicé et envoûtant unique.",
+        "whatsapp_msg": "Bonjour, je souhaite commander l'Huile Chauffante Argan & Cannelle Barbaria Morocco."
+      }
+    },
+    "gammes": {
+      "huiles-pures": {
+        "name": "Huiles Pures",
+        "tagline": "1 seul ingrédient · Pressées à froid · Zéro additif"
+      },
+      "serums": {
+        "name": "Sérums Concentrés",
+        "tagline": "Mélanges d'huiles pures · Formules ciblées · Zéro chimie"
+      },
+      "hammam": {
+        "name": "Rituel Hammam",
+        "tagline": "Gommages · Masques · Ingrédients ancestraux"
+      },
+      "eaux-florales": {
+        "name": "Eaux Florales & Hydrolats",
+        "tagline": "Distillation artisanale à la vapeur · Zéro alcool"
+      },
+      "savons-noirs": {
+        "name": "Savons Noirs Naturels",
+        "tagline": "Base beldi · Parfumés aux ingrédients marocains · Zéro SLS"
+      },
+      "huiles-massage": {
+        "name": "Huiles de Massage Parfumées",
+        "tagline": "Base Argan ou Figue · Corps & rituels spa"
       }
     },
     "ingredients": {
@@ -184,5 +383,26 @@
     "links": "Liens",
     "follow": "Nous suivre",
     "copyright": "© 2026 Barbaria Morocco. Tous droits réservés."
+  },
+  "order": {
+    "title": "Composer Votre Commande",
+    "subtitle": "Sélectionnez vos produits et quantités. Partagez votre commande par WhatsApp ou email.",
+    "summary_title": "Votre Commande",
+    "summary_empty": "Aucun produit sélectionné",
+    "summary_items": "produit(s)",
+    "share_whatsapp": "Partager sur WhatsApp",
+    "share_email": "Envoyer par Email",
+    "share_copy": "Copier la commande",
+    "share_copied": "Copié !",
+    "clear": "Effacer tout",
+    "quantity": "Qté",
+    "section_cosmetics": "Cosmétiques Naturels",
+    "section_textile": "Textile Artisanal",
+    "section_food": "Alimentaire",
+    "food_coming_soon": "Bientôt disponible - contactez-nous pour précommander",
+    "cta_title": "Prêt à commander ?",
+    "cta_subtitle": "Composez votre sélection et partagez-la directement avec notre équipe.",
+    "whatsapp_header": "Bonjour Barbaria Morocco,\n\nJe souhaite commander :\n\n",
+    "whatsapp_footer": "\n\nMerci !"
   }
 }

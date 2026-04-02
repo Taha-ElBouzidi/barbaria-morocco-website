@@ -97,6 +97,12 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* Right — contact + locale + mobile toggle */}
         <div className="flex items-center gap-4">
           <Link
+            href="/order"
+            className="hidden md:block btn-glass-gold btn-ripple px-4 py-1.5 text-xs tracking-widest uppercase rounded-full"
+          >
+            {t("order")}
+          </Link>
+          <Link
             href="/contact"
             className={`hidden md:block text-xs tracking-widest uppercase transition-colors duration-300 hover:text-[#C9963A] ${
               pathname === "/contact"
@@ -150,7 +156,15 @@ export default function Navbar({ locale }: { locale: string }) {
               </li>
             ))}
           </ul>
-          <div className="mt-4 pt-4 border-t border-[#2C1A0E]/10">
+          <div className="mt-4 pt-4 border-t border-[#2C1A0E]/10 flex items-center gap-4">
+            <Link
+              href="/order"
+              className="text-xs tracking-widest uppercase text-[#C9963A] font-medium hover:text-[#C9963A]/80 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              {t("order")}
+            </Link>
+            <span className="text-[#2C1A0E]/20">·</span>
             <Link
               href="/contact"
               className="text-xs tracking-widest uppercase text-[#2C1A0E]/55 hover:text-[#C9963A] transition-colors"
