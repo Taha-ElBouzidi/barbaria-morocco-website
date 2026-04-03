@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Plus, Check } from "lucide-react";
+import { Plus, Check, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import type { ProductDef } from "@/lib/products";
 import { useCart } from "@/lib/cart-context";
@@ -13,6 +13,7 @@ export default function CompactProductCard({ product }: { product: ProductDef })
   const { cart, toggle } = useCart();
   const inCart = cart.has(product.key);
   const [animating, setAnimating] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   function handleToggle() {
     setAnimating(true);
@@ -67,13 +68,24 @@ export default function CompactProductCard({ product }: { product: ProductDef })
       <div className="flex flex-col flex-1 p-4">
         <p className="text-[10px] tracking-[0.3em] uppercase text-[#E299A1] mb-1">{t("tagline")}</p>
         <h3 className="font-playfair text-base font-bold text-[#2C1A0E] mb-2 leading-snug">{t("name")}</h3>
-        <p className="text-xs text-[#2C1A0E]/65 leading-relaxed line-clamp-2 mb-4 flex-1">{t("description")}</p>
+        <p className={`text-xs text-[#2C1A0E]/65 leading-relaxed mb-1 flex-1 ${expanded ? "" : "line-clamp-2"}`}>
+          {t("description")}
+        </p>
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="flex items-center gap-1 text-[9px] tracking-wider uppercase text-[#E299A1] hover:text-[#C9963A] transition-colors mb-3 self-start"
+        >
+          {expanded ? "Réduire" : "Lire plus"}
+          <ChevronDown size={10} className={`transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
+        </button>
 
         {/* INCI key ingredient pill */}
         {product.inci[0] && (
           <div>
             <span className="inline-block text-[9px] tracking-wider text-[#9B8B7A] bg-[#EAD9C0]/60 px-2 py-1 rounded-full font-mono truncate max-w-full">
-              {product.inci[0].split(" ")[0]} {product.inci[0].split(" ")[1] ?? ""}
+              {expanded
+                ? product.inci.join(" · ")
+                : `${product.inci[0].split(" ")[0]} ${product.inci[0].split(" ")[1] ?? ""}`}
             </span>
           </div>
         )}
