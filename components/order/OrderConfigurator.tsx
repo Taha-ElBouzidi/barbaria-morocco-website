@@ -77,9 +77,9 @@ export default function OrderConfigurator() {
 
       {/* Mobile sticky bottom bar */}
       {order.size > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden glass border-t border-white/30 px-4 py-3 flex items-center gap-3">
-          <div className="flex-1">
-            <p className="text-xs font-semibold text-[#2C1A0E]">
+        <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[#2C1A0E]/95 backdrop-blur-md border-t border-[#C9963A]/20 px-4 py-3 flex items-center gap-3">
+          <div className="flex-1 min-w-0">
+            <p className="text-xs font-semibold text-[#F7F2EA] truncate">
               {order.size} {t("summary_items")}
             </p>
           </div>
@@ -88,6 +88,7 @@ export default function OrderConfigurator() {
             gammes={GAMMES}
             textileProducts={TEXTILE_PRODUCTS}
             disabled={false}
+            compact
           />
         </div>
       )}

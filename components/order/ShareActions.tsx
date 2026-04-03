@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { MessageCircle, Mail, Copy, Check } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { WHATSAPP_NUMBER } from "@/components/Navbar";
 import { CONTACT_EMAIL } from "@/lib/constants";
 import { buildWhatsAppText, buildEmailText } from "@/lib/order-utils";
@@ -14,9 +15,10 @@ interface ShareActionsProps {
   gammes: GammeDef[];
   textileProducts: ProductDef[];
   disabled: boolean;
+  compact?: boolean;
 }
 
-export default function ShareActions({ order, gammes, textileProducts, disabled }: ShareActionsProps) {
+export default function ShareActions({ order, gammes, textileProducts, disabled, compact = false }: ShareActionsProps) {
   const t = useTranslations("order");
   const cosmeticsT = useTranslations("cosmetics.products");
   const cosmeticsGammesT = useTranslations("cosmetics.gammes");
@@ -79,6 +81,37 @@ export default function ShareActions({ order, gammes, textileProducts, disabled 
       setTimeout(() => setCopied(false), 2000);
     }
   };
+
+  if (compact) {
+    return (
+      <div className="flex items-center gap-2">
+        <button
+          onClick={handleWhatsApp}
+          disabled={disabled}
+          aria-label={t("share_whatsapp")}
+          className="w-10 h-10 rounded-full bg-[#25D366]/90 text-white flex items-center justify-center shadow-sm hover:bg-[#25D366] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        >
+          <FaWhatsapp size={18} />
+        </button>
+        <button
+          onClick={handleEmail}
+          disabled={disabled}
+          aria-label={t("share_email")}
+          className="w-10 h-10 rounded-full btn-glass-gold flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed"
+        >
+          <Mail size={16} />
+        </button>
+        <button
+          onClick={handleCopy}
+          disabled={disabled}
+          aria-label={copied ? t("share_copied") : t("share_copy")}
+          className="w-10 h-10 rounded-full btn-glass-outline-dark flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+        >
+          {copied ? <Check size={15} className="text-green-600" /> : <Copy size={15} />}
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-2">
