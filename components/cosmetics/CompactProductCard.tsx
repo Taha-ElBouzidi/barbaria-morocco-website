@@ -1,38 +1,24 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { MessageCircle } from "lucide-react";
-import { WHATSAPP_NUMBER } from "@/components/Navbar";
+import { Plus, Check } from "lucide-react";
 import Image from "next/image";
 import type { ProductDef } from "@/lib/products";
-
-function ProductPlaceholder({ name }: { name: string }) {
-  return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#EAD9C0]/60">
-      {/* Berber geometric SVG watermark */}
-      <svg
-        className="absolute opacity-[0.06] w-3/4 h-3/4"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" stroke="#2C1A0E" strokeWidth="2" fill="none" />
-        <polygon points="50,18 82,34.5 82,65.5 50,82 18,65.5 18,34.5" stroke="#2C1A0E" strokeWidth="1.5" fill="none" />
-        <polygon points="50,31 69,41.5 69,58.5 50,69 31,58.5 31,41.5" stroke="#2C1A0E" strokeWidth="1" fill="none" />
-        <line x1="50" y1="5" x2="50" y2="95" stroke="#2C1A0E" strokeWidth="0.5" />
-        <line x1="5" y1="27.5" x2="95" y2="72.5" stroke="#2C1A0E" strokeWidth="0.5" />
-        <line x1="5" y1="72.5" x2="95" y2="27.5" stroke="#2C1A0E" strokeWidth="0.5" />
-      </svg>
-      <span className="relative font-playfair italic text-[#2C1A0E]/30 text-center px-4 text-xs leading-relaxed">
-        {name}
-      </span>
-    </div>
-  );
-}
+import { useCart } from "@/lib/cart-context";
+import ProductPlaceholder from "@/components/shared/ProductPlaceholder";
 
 export default function CompactProductCard({ product }: { product: ProductDef }) {
   const t = useTranslations(`cosmetics.products.${product.key}`);
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t("whatsapp_msg"))}`;
+  const { cart, toggle } = useCart();
+  const inCart = cart.has(product.key);
+  const [animating, setAnimating] = useState(false);
+
+  function handleToggle() {
+    setAnimating(true);
+    toggle(product.key);
+    setTimeout(() => setAnimating(false), 300);
+  }
 
   return (
     <article className="group flex flex-col glass rounded-sm card-hover overflow-hidden">
@@ -60,6 +46,21 @@ export default function CompactProductCard({ product }: { product: ProductDef })
         )}
         {/* Bottom gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#2C1A0E]/20 to-transparent pointer-events-none" />
+
+        {/* Add to cart button — bottom-right of photo */}
+        <button
+          onClick={handleToggle}
+          aria-label={inCart ? t("added") : t("add_to_cart")}
+          className={`absolute bottom-3 right-3 w-9 h-9 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 ${
+            animating ? "scale-125" : "scale-100"
+          } ${
+            inCart
+              ? "bg-[#C9963A] border border-[#E8C97A]/50 text-white shadow-[0_0_12px_rgba(201,150,58,0.5)]"
+              : "bg-[#E299A1]/90 border border-[#F0C4CA]/50 text-white hover:bg-[#E299A1] hover:scale-110"
+          }`}
+        >
+          {inCart ? <Check size={15} strokeWidth={2.5} /> : <Plus size={15} strokeWidth={2.5} />}
+        </button>
       </div>
 
       {/* Content */}
@@ -70,19 +71,12 @@ export default function CompactProductCard({ product }: { product: ProductDef })
 
         {/* INCI key ingredient pill */}
         {product.inci[0] && (
-          <div className="mb-4">
+          <div>
             <span className="inline-block text-[9px] tracking-wider text-[#9B8B7A] bg-[#EAD9C0]/60 px-2 py-1 rounded-full font-mono truncate max-w-full">
               {product.inci[0].split(" ")[0]} {product.inci[0].split(" ")[1] ?? ""}
             </span>
           </div>
         )}
-
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-          <button className="btn-glass-pink btn-ripple w-full py-2.5 text-xs tracking-wider uppercase rounded-full flex items-center justify-center gap-2">
-            <MessageCircle size={13} />
-            Commander
-          </button>
-        </a>
       </div>
     </article>
   );

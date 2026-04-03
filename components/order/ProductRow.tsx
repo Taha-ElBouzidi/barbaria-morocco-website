@@ -1,7 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import type { ProductDef } from "@/lib/products";
+import ProductPlaceholder from "@/components/shared/ProductPlaceholder";
 
 interface ProductRowProps {
   product: ProductDef;
@@ -30,6 +32,21 @@ export default function ProductRow({
       }`}
       onClick={() => onToggle(product.key)}
     >
+      {/* Thumbnail */}
+      <div className="flex-shrink-0 w-12 h-12 rounded overflow-hidden relative">
+        {product.photo ? (
+          <Image
+            src={product.photo}
+            alt={t("name")}
+            fill
+            className="object-cover"
+            sizes="48px"
+          />
+        ) : (
+          <ProductPlaceholder name={t("name")} size={48} />
+        )}
+      </div>
+
       {/* Checkbox */}
       <div
         className={`flex-shrink-0 w-5 h-5 rounded border-2 transition-all duration-200 flex items-center justify-center ${

@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { useCart } from "@/lib/cart-context";
 
 const WHATSAPP_NUMBER = "212659658863";
 const INSTAGRAM_HANDLE = "barbaria_00";
@@ -27,6 +28,7 @@ export default function Navbar({ locale }: { locale: string }) {
     { href: "/food",      label: t("food"),       dot: "#C9963A" },
   ];
 
+  const { totalItems } = useCart();
   const otherLocale = locale === "fr" ? "en" : "fr";
   const isHeroPage = pathname === "/";
   const isDark = !scrolled && isHeroPage && !menuOpen;
@@ -96,12 +98,19 @@ export default function Navbar({ locale }: { locale: string }) {
 
         {/* Right — contact + locale + mobile toggle */}
         <div className="flex items-center gap-4">
-          <Link
-            href="/order"
-            className="hidden md:block btn-glass-gold btn-ripple px-4 py-1.5 text-xs tracking-widest uppercase rounded-full"
-          >
-            {t("order")}
-          </Link>
+          <div className="relative hidden md:block">
+            <Link
+              href="/order"
+              className="btn-glass-gold btn-ripple px-4 py-1.5 text-xs tracking-widest uppercase rounded-full"
+            >
+              {t("order")}
+            </Link>
+            {totalItems > 0 && (
+              <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-[#E299A1] text-white text-[9px] font-bold flex items-center justify-center pointer-events-none">
+                {totalItems > 99 ? "99" : totalItems}
+              </span>
+            )}
+          </div>
           <Link
             href="/contact"
             className={`hidden md:block text-xs tracking-widest uppercase transition-colors duration-300 hover:text-[#C9963A] ${

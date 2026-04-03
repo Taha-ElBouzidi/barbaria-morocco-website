@@ -8,6 +8,7 @@ import JsonLd from "@/components/JsonLd";
 import ScrollReveal from "@/components/ScrollReveal";
 import GammeNav from "@/components/cosmetics/GammeNav";
 import GammeSection from "@/components/cosmetics/GammeSection";
+import CartStickyBar from "@/components/cosmetics/CartStickyBar";
 import { GAMMES } from "@/lib/products";
 import { BASE_URL } from "@/lib/constants";
 
@@ -184,6 +185,9 @@ export default function CosmeticsPage() {
 
       {/* Order CTA */}
       <OrderCTA />
+
+      {/* Mobile sticky cart bar */}
+      <CartStickyBar />
     </div>
   );
 }

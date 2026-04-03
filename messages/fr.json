@@ -39,6 +39,10 @@
     "title": "Cosmétiques Naturels",
     "subtitle": "Des soins premium formulés avec les meilleurs ingrédients du Maroc, par des mains qui savent.",
     "tagline_page": "Clean beauty · Made in Morocco",
+    "add_to_cart": "Ajouter",
+    "added": "Ajouté",
+    "view_cart": "Voir ma commande",
+    "cart_bar": "{count} produit(s) sélectionné(s)",
     "featured_title": "Nos Soins",
     "view": "Voir le produit",
     "products": {

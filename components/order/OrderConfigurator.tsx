@@ -1,50 +1,15 @@
 "use client";
 
-import { useReducer } from "react";
 import { useTranslations } from "next-intl";
 import { GammeAccordion, TextileAccordion } from "./GammeAccordion";
 import OrderSummary from "./OrderSummary";
 import ShareActions from "./ShareActions";
 import { GAMMES, TEXTILE_PRODUCTS } from "@/lib/products";
-import type { OrderState } from "@/lib/order-utils";
-
-type OrderAction =
-  | { type: "toggle"; key: string }
-  | { type: "setQty"; key: string; qty: number }
-  | { type: "remove"; key: string }
-  | { type: "clear" };
-
-function orderReducer(state: OrderState, action: OrderAction): OrderState {
-  const next = new Map(state);
-  switch (action.type) {
-    case "toggle":
-      if (next.has(action.key)) {
-        next.delete(action.key);
-      } else {
-        next.set(action.key, 1);
-      }
-      return next;
-    case "setQty":
-      if (action.qty >= 1) next.set(action.key, action.qty);
-      return next;
-    case "remove":
-      next.delete(action.key);
-      return next;
-    case "clear":
-      return new Map();
-    default:
-      return state;
-  }
-}
+import { useCart } from "@/lib/cart-context";
 
 export default function OrderConfigurator() {
   const t = useTranslations("order");
-  const [order, dispatch] = useReducer(orderReducer, new Map<string, number>());
-
-  const toggle = (key: string) => dispatch({ type: "toggle", key });
-  const setQty = (key: string, qty: number) => dispatch({ type: "setQty", key, qty });
-  const remove = (key: string) => dispatch({ type: "remove", key });
-  const clear = () => dispatch({ type: "clear" });
+  const { cart: order, toggle, setQty, remove, clear } = useCart();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">

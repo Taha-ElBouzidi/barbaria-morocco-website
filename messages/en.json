@@ -39,6 +39,10 @@
     "title": "Natural Cosmetics",
     "subtitle": "Premium skincare formulated with the finest ingredients from Morocco, by hands that know.",
     "tagline_page": "Clean beauty · Made in Morocco",
+    "add_to_cart": "Add",
+    "added": "Added",
+    "view_cart": "View order",
+    "cart_bar": "{count} product(s) selected",
     "featured_title": "Our Products",
     "view": "View product",
     "products": {
