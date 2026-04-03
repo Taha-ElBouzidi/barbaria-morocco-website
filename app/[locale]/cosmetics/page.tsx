@@ -66,7 +66,7 @@ function IngredientSpotlight() {
           <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-[#2C1A0E] mb-3">{t("title")}</h2>
           <p className="text-[#9B8B7A]">{t("subtitle")}</p>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {ingredients.map(({ key, photo }) => (
             <ScrollReveal key={key} className="group overflow-hidden rounded-sm card-hover">
               <div className="relative aspect-[4/3] overflow-hidden">
@@ -149,7 +149,7 @@ export default function CosmeticsPage() {
       />
 
       {/* Hero */}
-      <div className="relative py-24 px-6 text-center overflow-hidden">
+      <div className="relative py-14 sm:py-20 md:py-24 px-4 sm:px-6 text-center overflow-hidden">
         <Image
           src="/brand_photos/products-all-three.jpg"
           alt="Barbaria Cosmetics"
@@ -159,12 +159,12 @@ export default function CosmeticsPage() {
         />
         <div className="absolute inset-0 bg-[#F7F2EA]/82 backdrop-blur-sm" />
         <div className="relative z-10">
-          <p className="text-xs tracking-[0.4em] uppercase text-[#E299A1] mb-4">{t("tagline_page")}</p>
-          <h1 className="font-playfair text-5xl md:text-6xl font-bold text-[#2C1A0E] mb-4">
+          <p className="text-xs tracking-[0.4em] uppercase text-[#E299A1] mb-3 sm:mb-4">{t("tagline_page")}</p>
+          <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-[#2C1A0E] mb-3 sm:mb-4">
             {t("title")}
           </h1>
-          <p className="text-[#9B8B7A] max-w-lg mx-auto mb-6">{t("subtitle")}</p>
-          <div className="flex items-center justify-center gap-6 text-xs tracking-widest uppercase text-[#9B8B7A]">
+          <p className="text-sm text-[#9B8B7A] max-w-xs sm:max-w-lg mx-auto mb-4 sm:mb-6">{t("subtitle")}</p>
+          <div className="flex items-center justify-center gap-3 sm:gap-6 text-[10px] sm:text-xs tracking-widest uppercase text-[#9B8B7A]">
             <span>6 Gammes</span>
             <span className="w-1 h-1 rounded-full bg-[#E299A1]" />
             <span>36 Produits</span>

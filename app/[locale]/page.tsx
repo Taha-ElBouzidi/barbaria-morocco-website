@@ -70,7 +70,7 @@ function HeroSection() {
         <p className="animate-fade-in-up text-xs tracking-[0.5em] uppercase mb-6 text-[#C9963A]">
           {t("tagline")}
         </p>
-        <h1 className="animate-fade-in-up animation-delay-200 font-playfair text-5xl sm:text-6xl md:text-8xl font-bold mb-6 leading-tight drop-shadow-lg">
+        <h1 className="animate-fade-in-up animation-delay-200 font-playfair text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 leading-tight drop-shadow-lg">
           {t("headline")}
         </h1>
         <p className="animate-fade-in-up animation-delay-400 text-sm sm:text-base md:text-lg text-[#F7F2EA]/80 mb-12 leading-relaxed max-w-xl mx-auto">
@@ -96,7 +96,7 @@ function CategoryCards() {
   const t = useTranslations("home");
 
   return (
-    <section id="collections" className="py-20 sm:py-28 px-4 sm:px-6 max-w-7xl mx-auto">
+    <section id="collections" className="py-14 sm:py-20 md:py-28 px-4 sm:px-6 max-w-7xl mx-auto">
       <ScrollReveal className="text-center mb-12 sm:mb-16">
         <p className="text-xs tracking-[0.4em] uppercase text-[#C9963A] mb-4">Barbaria Morocco</p>
         <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-[#2C1A0E] mb-4">
@@ -105,7 +105,7 @@ function CategoryCards() {
         <div className="w-16 h-px bg-[#C9963A] mx-auto" />
       </ScrollReveal>
 
-      <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+      <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
         {categories.map(({ key, href, photo, accentGlass, border, btnClass }) => {
           const label = t(`categories.${key}.label`);
           const tagline = t(`categories.${key}.tagline`);

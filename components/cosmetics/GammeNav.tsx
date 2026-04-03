@@ -57,7 +57,7 @@ export default function GammeNav({ gammes, gammeNames }: GammeNavProps) {
     <div className="sticky top-16 z-40 glass shadow-sm border-b border-white/20">
       <div
         ref={scrollRef}
-        className="max-w-6xl mx-auto px-4 flex items-center gap-1 overflow-x-auto scrollbar-none py-2"
+        className="max-w-6xl mx-auto px-4 flex items-center gap-2 overflow-x-auto scrollbar-none py-1.5"
         style={{ scrollbarWidth: "none" }}
       >
         {gammes.map((gamme) => {
@@ -67,7 +67,7 @@ export default function GammeNav({ gammes, gammeNames }: GammeNavProps) {
               key={gamme.key}
               data-key={gamme.key}
               onClick={() => scrollToGamme(gamme.key)}
-              className={`flex-shrink-0 flex items-center gap-2 px-4 py-2 rounded-full text-xs tracking-wider uppercase transition-all duration-300 whitespace-nowrap ${
+              className={`flex-shrink-0 flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded-full text-xs tracking-wider uppercase transition-all duration-300 whitespace-nowrap ${
                 isActive
                   ? "bg-[#E299A1] text-white shadow-sm"
                   : "text-[#2C1A0E]/60 hover:text-[#2C1A0E] hover:bg-[#E299A1]/10"

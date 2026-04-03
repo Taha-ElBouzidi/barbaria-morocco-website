@@ -65,10 +65,10 @@ export default function CompactProductCard({ product }: { product: ProductDef })
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1 p-4">
-        <p className="text-[10px] tracking-[0.3em] uppercase text-[#E299A1] mb-1">{t("tagline")}</p>
-        <h3 className="font-playfair text-base font-bold text-[#2C1A0E] mb-2 leading-snug">{t("name")}</h3>
-        <p className={`text-xs text-[#2C1A0E]/65 leading-relaxed mb-1 flex-1 ${expanded ? "" : "line-clamp-2"}`}>
+      <div className="flex flex-col flex-1 p-3 sm:p-4">
+        <p className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-[#E299A1] mb-1">{t("tagline")}</p>
+        <h3 className="font-playfair text-sm sm:text-base font-bold text-[#2C1A0E] mb-1.5 sm:mb-2 leading-snug">{t("name")}</h3>
+        <p className={`text-[11px] sm:text-xs text-[#2C1A0E]/65 leading-relaxed mb-1 flex-1 ${expanded ? "" : "line-clamp-2"}`}>
           {t("description")}
         </p>
         <button

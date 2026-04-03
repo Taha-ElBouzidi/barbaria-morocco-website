@@ -25,7 +25,7 @@ export default function ProductRow({
 
   return (
     <div
-      className={`flex items-center gap-3 px-4 py-3 rounded-sm transition-all duration-200 cursor-pointer group ${
+      className={`flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-sm transition-all duration-200 cursor-pointer group ${
         isSelected
           ? "bg-[#E299A1]/10 border border-[#E299A1]/30"
           : "border border-transparent hover:bg-[#F7F2EA] hover:border-[#DDD0BC]/50"
@@ -33,7 +33,7 @@ export default function ProductRow({
       onClick={() => onToggle(product.key)}
     >
       {/* Thumbnail */}
-      <div className="flex-shrink-0 w-12 h-12 rounded overflow-hidden relative">
+      <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded overflow-hidden relative">
         {product.photo ? (
           <Image
             src={product.photo}
@@ -79,7 +79,7 @@ export default function ProductRow({
           onClick={(e) => e.stopPropagation()}
         >
           <button
-            className="w-6 h-6 rounded-full border border-[#DDD0BC] flex items-center justify-center text-xs text-[#2C1A0E]/60 hover:border-[#E299A1] hover:text-[#E299A1] transition-colors"
+            className="w-8 h-8 sm:w-7 sm:h-7 rounded-full border border-[#DDD0BC] flex items-center justify-center text-sm sm:text-xs text-[#2C1A0E]/60 hover:border-[#E299A1] hover:text-[#E299A1] transition-colors flex-shrink-0"
             onClick={() => onQuantityChange(product.key, Math.max(1, (quantity ?? 1) - 1))}
           >
             −
@@ -93,10 +93,10 @@ export default function ProductRow({
               const val = parseInt(e.target.value, 10);
               if (!isNaN(val) && val >= 1) onQuantityChange(product.key, val);
             }}
-            className="w-10 text-center text-sm font-medium text-[#2C1A0E] bg-transparent border-b border-[#DDD0BC] focus:outline-none focus:border-[#E299A1]"
+            className="w-10 sm:w-9 text-center text-sm font-medium text-[#2C1A0E] bg-transparent border-b border-[#DDD0BC] focus:outline-none focus:border-[#E299A1]"
           />
           <button
-            className="w-6 h-6 rounded-full border border-[#DDD0BC] flex items-center justify-center text-xs text-[#2C1A0E]/60 hover:border-[#E299A1] hover:text-[#E299A1] transition-colors"
+            className="w-8 h-8 sm:w-7 sm:h-7 rounded-full border border-[#DDD0BC] flex items-center justify-center text-sm sm:text-xs text-[#2C1A0E]/60 hover:border-[#E299A1] hover:text-[#E299A1] transition-colors flex-shrink-0"
             onClick={() => onQuantityChange(product.key, (quantity ?? 1) + 1)}
           >
             +

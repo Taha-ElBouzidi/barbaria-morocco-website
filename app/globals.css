@@ -210,8 +210,21 @@
     transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.5s cubic-bezier(0.4,0,0.2,1);
   }
   .card-hover:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 24px 48px rgba(44,26,14,0.14), 0 8px 16px rgba(44,26,14,0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(44,26,14,0.12), 0 4px 8px rgba(44,26,14,0.06);
+  }
+  @media (min-width: 768px) {
+    .card-hover:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 24px 48px rgba(44,26,14,0.14), 0 8px 16px rgba(44,26,14,0.08);
+    }
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .card-hover, .card-hover:hover { transform: none; transition: box-shadow 0.3s; }
+    .animate-fade-in-up { animation: none; opacity: 1; }
+    .scroll-reveal, .stagger-children > * { animation: none; opacity: 1; transform: none; }
   }
 
   /* Fade in up (hero / initial load) */

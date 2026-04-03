@@ -10,11 +10,11 @@ interface GammeSectionProps {
 
 export default function GammeSection({ gamme, gammeName, gammeTagline }: GammeSectionProps) {
   return (
-    <section id={`gamme-${gamme.key}`} className="py-16 sm:py-20 scroll-mt-28">
+    <section id={`gamme-${gamme.key}`} className="py-12 sm:py-16 md:py-20 scroll-mt-24 sm:scroll-mt-28">
       {/* Gamme header */}
       <div className="flex items-start gap-6 mb-10 sm:mb-12">
         <div className="flex-shrink-0">
-          <span className="font-playfair text-5xl sm:text-6xl font-bold text-[#E299A1]/20 leading-none select-none">
+          <span className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-[#E299A1]/20 leading-none select-none">
             {gamme.number}
           </span>
         </div>
@@ -28,7 +28,7 @@ export default function GammeSection({ gamme, gammeName, gammeTagline }: GammeSe
       </div>
 
       {/* Product grid */}
-      <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+      <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
         {gamme.products.map((product) => (
           <StaggerItem key={product.key}>
             <CompactProductCard product={product} />
