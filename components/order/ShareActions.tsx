@@ -89,25 +89,17 @@ export default function ShareActions({ order, gammes, textileProducts, disabled,
           onClick={handleWhatsApp}
           disabled={disabled}
           aria-label={t("share_whatsapp")}
-          className="w-10 h-10 rounded-full bg-[#25D366]/90 text-white flex items-center justify-center shadow-sm hover:bg-[#25D366] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          className="w-11 h-11 rounded-full bg-[#25D366]/90 text-white flex items-center justify-center shadow-sm hover:bg-[#25D366] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
-          <FaWhatsapp size={18} />
+          <FaWhatsapp size={20} />
         </button>
         <button
           onClick={handleEmail}
           disabled={disabled}
           aria-label={t("share_email")}
-          className="w-10 h-10 rounded-full btn-glass-gold flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed"
+          className="w-11 h-11 rounded-full btn-glass-gold flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed"
         >
-          <Mail size={16} />
-        </button>
-        <button
-          onClick={handleCopy}
-          disabled={disabled}
-          aria-label={copied ? t("share_copied") : t("share_copy")}
-          className="w-10 h-10 rounded-full btn-glass-outline-dark flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed transition-all"
-        >
-          {copied ? <Check size={15} className="text-green-600" /> : <Copy size={15} />}
+          <Mail size={17} />
         </button>
       </div>
     );

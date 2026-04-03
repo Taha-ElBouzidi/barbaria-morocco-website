@@ -82,6 +82,9 @@ export default function OrderConfigurator() {
             <p className="text-xs font-semibold text-[#F7F2EA] truncate">
               {order.size} {t("summary_items")}
             </p>
+            <p className="text-[9px] tracking-wider uppercase text-[#C9963A]/80 mt-0.5">
+              Envoyer →
+            </p>
           </div>
           <ShareActions
             order={order}
