@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { MessageCircle, Mail, Copy, Check } from "lucide-react";
+import { Mail, Copy, Check, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { WHATSAPP_NUMBER } from "@/components/Navbar";
-import { CONTACT_EMAIL } from "@/lib/constants";
+import { CONTACT_EMAIL, CONTACT_PHONE_TEL } from "@/lib/constants";
 import { buildWhatsAppText, buildEmailText } from "@/lib/order-utils";
 import type { OrderState } from "@/lib/order-utils";
 import type { GammeDef, ProductDef } from "@/lib/products";
@@ -15,10 +15,9 @@ interface ShareActionsProps {
   gammes: GammeDef[];
   textileProducts: ProductDef[];
   disabled: boolean;
-  compact?: boolean;
 }
 
-export default function ShareActions({ order, gammes, textileProducts, disabled, compact = false }: ShareActionsProps) {
+export default function ShareActions({ order, gammes, textileProducts, disabled }: ShareActionsProps) {
   const t = useTranslations("order");
   const cosmeticsT = useTranslations("cosmetics.products");
   const cosmeticsGammesT = useTranslations("cosmetics.gammes");
@@ -67,55 +66,21 @@ export default function ShareActions({ order, gammes, textileProducts, disabled,
     const text = buildWhatsAppText(order, gammes, textileProducts, productNames, gammeNames, header, footer);
     try {
       await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
     } catch {
-      // Fallback for older browsers
       const el = document.createElement("textarea");
       el.value = text;
       document.body.appendChild(el);
       el.select();
       document.execCommand("copy");
       document.body.removeChild(el);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
     }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
-
-  if (compact) {
-    return (
-      <div className="flex items-center gap-2">
-        <button
-          onClick={handleWhatsApp}
-          disabled={disabled}
-          aria-label={t("share_whatsapp")}
-          className="w-11 h-11 rounded-full bg-[#25D366]/90 text-white flex items-center justify-center shadow-sm hover:bg-[#25D366] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          <FaWhatsapp size={20} />
-        </button>
-        <button
-          onClick={handleEmail}
-          disabled={disabled}
-          aria-label={t("share_email")}
-          className="w-11 h-11 rounded-full btn-glass-gold flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          <Mail size={17} />
-        </button>
-      </div>
-    );
-  }
 
   return (
     <div className="space-y-2">
-      <button
-        onClick={handleWhatsApp}
-        disabled={disabled}
-        className="btn-glass-pink btn-ripple w-full py-3 text-xs tracking-wider uppercase rounded-full flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed"
-      >
-        <MessageCircle size={14} />
-        {t("share_whatsapp")}
-      </button>
-
+      {/* Email — prominent, B2B mandatory */}
       <button
         onClick={handleEmail}
         disabled={disabled}
@@ -125,14 +90,35 @@ export default function ShareActions({ order, gammes, textileProducts, disabled,
         {t("share_email")}
       </button>
 
+      {/* WhatsApp */}
       <button
-        onClick={handleCopy}
+        onClick={handleWhatsApp}
         disabled={disabled}
-        className="btn-glass-outline-dark w-full py-3 text-xs tracking-wider uppercase rounded-full flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+        className="btn-glass-pink btn-ripple w-full py-3 text-xs tracking-wider uppercase rounded-full flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        {copied ? <Check size={14} className="text-green-600" /> : <Copy size={14} />}
-        {copied ? t("share_copied") : t("share_copy")}
+        <FaWhatsapp size={15} />
+        {t("share_whatsapp")}
       </button>
+
+      {/* Call + Copy side by side */}
+      <div className="grid grid-cols-2 gap-2">
+        <a
+          href={disabled ? undefined : CONTACT_PHONE_TEL}
+          aria-disabled={disabled}
+          className={`btn-glass-outline-dark btn-ripple py-3 text-xs tracking-wider uppercase rounded-full flex items-center justify-center gap-2 transition-all ${disabled ? "opacity-40 pointer-events-none" : ""}`}
+        >
+          <Phone size={13} />
+          {t("share_call")}
+        </a>
+        <button
+          onClick={handleCopy}
+          disabled={disabled}
+          className="btn-glass-outline-dark w-full py-3 text-xs tracking-wider uppercase rounded-full flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+        >
+          {copied ? <Check size={13} className="text-green-600" /> : <Copy size={13} />}
+          {copied ? t("share_copied") : t("share_copy")}
+        </button>
+      </div>
     </div>
   );
 }

@@ -377,6 +377,7 @@
       "error": "Something went wrong. Please try again."
     },
     "or": "Or reach us directly",
+    "phone_label": "Direct Call",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
     "email_label": "Email"
@@ -394,9 +395,10 @@
     "summary_title": "Your Order",
     "summary_empty": "No products selected",
     "summary_items": "item(s)",
-    "share_whatsapp": "Share on WhatsApp",
+    "share_whatsapp": "WhatsApp",
     "share_email": "Send by Email",
-    "share_copy": "Copy Order",
+    "share_call": "Call",
+    "share_copy": "Copy",
     "share_copied": "Copied!",
     "clear": "Clear all",
     "quantity": "Qty",

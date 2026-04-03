@@ -377,6 +377,7 @@
       "error": "Une erreur s'est produite. Veuillez réessayer."
     },
     "or": "Ou contactez-nous directement",
+    "phone_label": "Appel Direct",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
     "email_label": "Email"
@@ -394,9 +395,10 @@
     "summary_title": "Votre Commande",
     "summary_empty": "Aucun produit sélectionné",
     "summary_items": "produit(s)",
-    "share_whatsapp": "Partager sur WhatsApp",
+    "share_whatsapp": "WhatsApp",
     "share_email": "Envoyer par Email",
-    "share_copy": "Copier la commande",
+    "share_call": "Appeler",
+    "share_copy": "Copier",
     "share_copied": "Copié !",
     "clear": "Effacer tout",
     "quantity": "Qté",

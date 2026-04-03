@@ -4,9 +4,10 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MessageCircle, Mail, Send, CheckCircle } from "lucide-react";
+import { MessageCircle, Mail, Send, CheckCircle, Phone } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { WHATSAPP_NUMBER, INSTAGRAM_HANDLE } from "@/components/Navbar";
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_TEL } from "@/lib/constants";
 
 const FORMSPREE_ID = "TODO_FORMSPREE_ID"; // TODO: replace with your Formspree form ID
 
@@ -108,10 +109,22 @@ export default function ContactPage() {
 
           {[
             {
+              href: CONTACT_PHONE_TEL,
+              Icon: Phone,
+              label: t("phone_label"),
+              sub: CONTACT_PHONE,
+            },
+            {
               href: `https://wa.me/${WHATSAPP_NUMBER}`,
               Icon: MessageCircle,
               label: t("whatsapp"),
               sub: `+${WHATSAPP_NUMBER}`,
+            },
+            {
+              href: `mailto:${CONTACT_EMAIL}`,
+              Icon: Mail,
+              label: t("email_label"),
+              sub: CONTACT_EMAIL,
             },
             {
               href: `https://instagram.com/${INSTAGRAM_HANDLE}`,
@@ -119,17 +132,11 @@ export default function ContactPage() {
               label: t("instagram"),
               sub: `@${INSTAGRAM_HANDLE}`,
             },
-            {
-              href: "mailto:ta.elbouzidi@gmail.com",
-              Icon: Mail,
-              label: t("email_label"),
-              sub: "ta.elbouzidi@gmail.com",
-            },
           ].map(({ href, Icon, label, sub }) => (
             <a
               key={href}
               href={href}
-              target={href.startsWith("mailto") ? undefined : "_blank"}
+              target={href.startsWith("mailto") || href.startsWith("tel") ? undefined : "_blank"}
               rel="noopener noreferrer"
               className="group flex items-center gap-4 p-4 glass rounded-2xl hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
             >

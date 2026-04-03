@@ -12,7 +12,7 @@ export default function OrderConfigurator() {
   const { cart: order, toggle, setQty, remove, clear } = useCart();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 pb-24 md:pb-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-start">
         {/* Left: product selection */}
         <div className="lg:col-span-2 space-y-3">
@@ -74,27 +74,6 @@ export default function OrderConfigurator() {
           </OrderSummary>
         </div>
       </div>
-
-      {/* Mobile sticky bottom bar */}
-      {order.size > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[#2C1A0E]/95 backdrop-blur-md border-t border-[#C9963A]/20 px-4 py-3 flex items-center gap-3">
-          <div className="flex-1 min-w-0">
-            <p className="text-xs font-semibold text-[#F7F2EA] truncate">
-              {order.size} {t("summary_items")}
-            </p>
-            <p className="text-[9px] tracking-wider uppercase text-[#C9963A]/80 mt-0.5">
-              Envoyer →
-            </p>
-          </div>
-          <ShareActions
-            order={order}
-            gammes={GAMMES}
-            textileProducts={TEXTILE_PRODUCTS}
-            disabled={false}
-            compact
-          />
-        </div>
-      )}
     </div>
   );
 }

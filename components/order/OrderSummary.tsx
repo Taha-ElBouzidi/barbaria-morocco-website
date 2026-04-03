@@ -104,8 +104,8 @@ export default function OrderSummary({
         )}
       </div>
 
-      {/* Share actions slot — desktop only, mobile uses bottom bar */}
-      <div className="hidden md:block px-4 py-4 border-t border-white/30">
+      {/* Share actions slot */}
+      <div className="px-4 py-4 border-t border-white/30">
         {children}
       </div>
     </div>
