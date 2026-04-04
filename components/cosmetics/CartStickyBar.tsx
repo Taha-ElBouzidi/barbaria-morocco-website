@@ -1,15 +1,17 @@
 "use client";
 
 import { useCart } from "@/lib/cart-context";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 
 export default function CartStickyBar() {
   const { totalItems } = useCart();
+  const pathname = usePathname();
   const t = useTranslations("cosmetics");
 
-  if (totalItems === 0) return null;
+  // Hide on the order page itself — it has its own full summary
+  if (totalItems === 0 || pathname === "/order") return null;
 
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-40">

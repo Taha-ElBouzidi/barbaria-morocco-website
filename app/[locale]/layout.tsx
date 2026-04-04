@@ -11,6 +11,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { CartProvider } from "@/lib/cart-context";
+import CartStickyBar from "@/components/cosmetics/CartStickyBar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -102,6 +103,7 @@ export default async function LocaleLayout({
             <Navbar locale={locale} />
             <main id="main-content" className="flex-1">{children}</main>
             <WhatsAppFloat />
+            <CartStickyBar />
             <Footer />
           </CartProvider>
         </NextIntlClientProvider>

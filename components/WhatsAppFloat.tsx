@@ -14,7 +14,7 @@ export default function WhatsAppFloat() {
       rel="noopener noreferrer"
       aria-label="Contact us on WhatsApp"
       className={`fixed right-5 sm:right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 ${
-        totalItems > 0 ? "bottom-16 md:bottom-6" : "bottom-6"
+        totalItems > 0 ? "bottom-20 md:bottom-6" : "bottom-6"
       }`}
     >
       <FaWhatsapp size={28} />
